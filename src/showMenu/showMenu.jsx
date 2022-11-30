@@ -2,9 +2,9 @@ import menu from "../menu.json";
 
 const ShowMenu = ({ lang }) => {
   return (
-    <div className="show-menu">
-      {lang === "fr" || lang === "de" ? (
-        <div>Coming Soon.</div>
+    <div id="show-menu">
+      {lang === false ? null : lang === "fr" || lang === "de" ? (
+        <div className="coming-soon">Coming Soon.</div>
       ) : (
         <>
           {menu.map((category, index) => (
@@ -20,14 +20,14 @@ const ShowMenu = ({ lang }) => {
                 {category.items.map((dish, index) => (
                   <div key={index}>
                     <div className="dish">{dish[lang]}</div>
-                    <div>
+                    <div className="price">
                       <i>
                         {dish["price"]}
                         {dish["currency"].map((curr, index) => (
-                          <span key={index}>{curr[lang]}</span>
+                          <span key={index}> {curr[lang]}</span>
                         ))}
                       </i>
-                      <hr></hr>
+                      <div className="divider-line" />
                     </div>
                   </div>
                 ))}
