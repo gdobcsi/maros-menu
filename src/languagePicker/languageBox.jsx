@@ -1,13 +1,31 @@
 const LanguageBox = ({
   setLanguage,
+  setShowSelectedMenu,
+  scrollTo,
   language,
   title,
   year,
   flagUrl,
   backgroundSize,
 }) => {
+  //
+  const onClickHandler = (language) => {
+    //
+    setShowSelectedMenu(true);
+    setLanguage(language);
+    //
+    console.log(scrollTo);
+
+    if (scrollTo !== null) {
+      scrollTo.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
-    <div onClick={() => setLanguage(language)} className="menu-button">
+    <div onClick={() => onClickHandler(language)} className="menu-button">
       <div className="flag-box">
         <div
           className="flag"

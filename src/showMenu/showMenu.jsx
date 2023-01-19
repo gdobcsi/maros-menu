@@ -1,8 +1,15 @@
 import menu from "../menu.json";
+import { useEffect, useRef } from "react";
 
-const ShowMenu = ({ lang }) => {
+const ShowMenu = ({ lang, setScrollTo }) => {
+  let menuRef = useRef();
+
+  useEffect(() => {
+    setScrollTo(menuRef);
+  }, []);
+
   return (
-    <div id="show-menu">
+    <div id="show-menu" ref={menuRef}>
       {lang === false ? null : lang === "fr" || lang === "de" ? (
         <div className="coming-soon">Coming Soon.</div>
       ) : (
