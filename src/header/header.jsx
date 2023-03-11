@@ -18,11 +18,15 @@ const Header = () => {
             <ClockIcon />
           </div>
           <div className="opening-text">
-            <div>Péntek, Szombat:</div>
-            <div className="bottom-space">12:00 - 20:00</div>
+            <div>Szombat:</div>
+            <div className="bottom-space">
+              <i>12:00 - 20:00</i>
+            </div>
 
             <div>Vasárnap:</div>
-            <div>12:00 - 19:00</div>
+            <div>
+              <i>12:00 - 19:00</i>
+            </div>
           </div>
         </div>
       </div>

@@ -14,8 +14,6 @@ const LanguageBox = ({
     setShowSelectedMenu(true);
     setLanguage(language);
     //
-    console.log(scrollTo);
-
     if (scrollTo !== null) {
       scrollTo.current.scrollIntoView({
         behavior: "smooth",
