@@ -35,10 +35,10 @@ const LanguageBox = ({
       </div>
       <div className="darker-bg">
         <p>{title}</p>
-        <span>
-          <i>{year}</i>
-        </span>
       </div>
+      <span>
+        <i>{year}</i>
+      </span>
     </div>
   );
 };
