@@ -22,7 +22,7 @@ const ShowMenu = ({ lang, setScrollTo }) => {
   return (
     <div className="show-menu-wrapper">
       <div id="show-menu" ref={menuRef} onWheel={(ev) => onScrollHandler(ev)}>
-        {lang === false ? null : lang === "fr" || lang === "de" ? (
+        {lang === false ? null : lang === "fr" ? (
           <div className="coming-soon">Coming Soon.</div>
         ) : (
           <>
