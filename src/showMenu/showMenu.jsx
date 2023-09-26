@@ -16,7 +16,7 @@ const ShowMenu = ({ lang, setScrollTo }) => {
     // console.log(menuRef.current.scrollTop);
     // setScrollPos(menuRef.current.clientHeight);
     // console.log(window.innerHeight);
-    console.log(menuRef.current);
+    // console.log(menuRef.current);
   };
 
   return (
@@ -37,6 +37,7 @@ const ShowMenu = ({ lang, setScrollTo }) => {
                 )}
                 <div>
                   {category.items.map((dish, index) => (
+                    
                     <div key={index}>
                       <div className="dish">{dish[lang]}</div>
                       <div className="price">

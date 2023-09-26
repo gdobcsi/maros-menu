@@ -1,0 +1,26 @@
+[
+    {
+       "hu": [
+        "Hétfő, Kedd: Zárva",
+        "Szerda, Csütörtök: 12:00 - 20:00",
+        "Péntek, Szombat: 12:00 - 21:00",
+        "Vasárnap: 12:00 - 20:00"
+       ]
+    },
+    {
+        "eng": [
+         "Monday, Tuesday: Closed",
+         "Wednesday, Thursday: 12:00 - 20:00",
+         "Friday, Saturday: 12:00 - 21:00",
+         "Sunday: 12:00 - 20:00"
+        ]
+     },
+     {
+        "de": [
+         "Montag, Dienstag: Zárva",
+         "Mittwoch, Donnerstag: 12:00 - 20:00",
+         "Freitag, Samstag: 12:00 - 21:00",
+         "Sonntag: 12:00 - 20:00"
+        ]
+     }
+]

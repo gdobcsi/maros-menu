@@ -1,7 +1,10 @@
 // import ClockIcon from "./icons/clock";
 import ClockIcon from "../header/icons/clock";
 import PhoneIcon from "../header/icons/phone";
-const Header = () => {
+const Header = ({selectedLanguage}) => {
+
+  //
+  console.log("header: ", selectedLanguage)
   return (
     <header className="header">
       <h2>Maros Étterem</h2>
@@ -18,7 +21,7 @@ const Header = () => {
             <ClockIcon />
           </div>
           <div className="opening-text">
-            <div>Szombat:</div>
+            <div>Péntek, Szombat:</div>
             <div className="bottom-space">
               <i>12:00 - 20:00</i>
             </div>

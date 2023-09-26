@@ -246,11 +246,11 @@ header {
 
 .show-menu-wrapper {
   margin-bottom: 8rem;
-  overflow-x: scroll !important;
+  /* overflow-x: scroll !important; */
 }
 
 #show-menu {
-  /* min-height: 100vh; */
+  min-height: 100vh;
 
   /* height: auto; */
 

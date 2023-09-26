@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="App" ref={appRef}>
       <StickyUpButton />
-      <Header />
+      <Header selectedLanguage={selectedLanguage} />
 
       <LanguagePicker
         setScrollTo={setScrollTo}
