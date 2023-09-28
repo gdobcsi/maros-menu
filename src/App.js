@@ -7,6 +7,7 @@ import LanguagePicker from "./languagePicker/languagePicker";
 
 import ShowMenu from "./showMenu/showMenu";
 import StickyUpButton from "./stickyUpButton/stickyUpButton";
+import OpeningTimes from "./openingTimes/openingTimes";
 
 function App() {
   const appRef = useRef();
@@ -34,6 +35,8 @@ function App() {
     <div className="App" ref={appRef}>
       <StickyUpButton />
       <Header selectedLanguage={selectedLanguage} />
+
+      <OpeningTimes />
 
       <LanguagePicker
         setScrollTo={setScrollTo}
