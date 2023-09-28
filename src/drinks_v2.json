@@ -1,0 +1,810 @@
+[
+  {
+    "softDrinks": [
+      {
+        "sodas": [
+          {
+            "name": [
+              {
+                "hu": "Coca-Cola"
+              },
+              {
+                "eng": "Coca-Cola"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Coca-Cola Zero"
+              },
+              {
+                "eng": "Coca-Cola Zero"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Fanta Narancs"
+              },
+              {
+                "eng": "Fanta Orange"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Sprite"
+              },
+              {
+                "eng": "Sprite"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Kinley Gyömbér"
+              },
+              {
+                "eng": "Kinley Ginger Ale"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Kinley Tonic"
+              },
+              {
+                "eng": "Kinley Tonic"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "juices": [
+          {
+            "name": [
+              {
+                "hu": "Cappy Alma"
+              },
+              {
+                "eng": "Cappy Apple"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Cappy Őszibarack"
+              },
+              {
+                "eng": "Cappy Peach"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Cappy Narancs"
+              },
+              {
+                "eng": "Cappy Orange"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Cappy Eper"
+              },
+              {
+                "eng": "Cappy Strawberry"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Cappy Ananász"
+              },
+              {
+                "eng": "Cappy Pineapple"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Cappy Körte"
+              },
+              {
+                "eng": "Cappy Pear"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Topjoy Paradicsomlé"
+              },
+              {
+                "eng": "Topjoy Tomato Juice"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ice-teas": [
+          {
+            "name": [
+              {
+                "hu": "Fuzetea Citrom"
+              },
+              {
+                "eng": "Fuzetea Lemon"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Fuzetea Barack"
+              },
+              {
+                "eng": "Fuzetea Peach"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "850",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "waters": [
+          {
+            "name": [
+              {
+                "hu": "Naturaqua Szénsavmentes"
+              },
+              {
+                "eng": "Naturaqua Still"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.3",
+                "unit": "L"
+              },
+              {
+                "eng": "300",
+                "unit": "ml"
+              }
+            ],
+            "price": "750",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Naturaqua Szénsavas"
+              },
+              {
+                "eng": "Naturaqua Sparkling"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.3",
+                "unit": "L"
+              },
+              {
+                "eng": "300",
+                "unit": "ml"
+              }
+            ],
+            "price": "750",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Römerquelle Szénsavmentes"
+              },
+              {
+                "eng": "Römerquelle Still"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.75",
+                "unit": "L"
+              },
+              {
+                "eng": "750",
+                "unit": "ml"
+              }
+            ],
+            "price": "1500",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Römerquelle Szénsavas"
+              },
+              {
+                "eng": "Römerquelle Sparkling"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.75",
+                "unit": "L"
+              },
+              {
+                "eng": "750",
+                "unit": "ml"
+              }
+            ],
+            "price": "1500",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "energyDrinks": [
+          {
+            "name": [
+              {
+                "hu": "RedBull"
+              },
+              {
+                "eng": "RedBull"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.25",
+                "unit": "L"
+              },
+              {
+                "eng": "250",
+                "unit": "ml"
+              }
+            ],
+            "price": "1200",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "homeMadeDrinks": [
+          {
+            "name": [
+              {
+                "hu": "Házi Limonádé"
+              },
+              {
+                "eng": "Homemade Lemonade"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.1",
+                "unit": "L"
+              },
+              {
+                "eng": "100",
+                "unit": "ml"
+              }
+            ],
+            "price": "400",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          },
+          {
+            "name": [
+              {
+                "hu": "Házi Szörpök"
+              },
+              {
+                "eng": "Homemade Cordials"
+              }
+            ],
+            "size": [
+              {
+                "hu": "0.1",
+                "unit": "L"
+              },
+              {
+                "eng": "100",
+                "unit": "ml"
+              }
+            ],
+            "price": "400",
+            "currency": [
+              {
+                "hu": "Ft"
+              },
+              {
+                "eng": "HUF"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "coffes": [
+      {
+        "name": [
+          {
+            "hu": "Illy Espresso"
+          },
+          {
+            "eng": "Illy Espresso"
+          }
+        ],
+        "size": null,
+        "price": "700",
+        "currency": [
+          {
+            "hu": "Ft"
+          },
+          {
+            "eng": "HUF"
+          }
+        ]
+      },
+      {
+        "name": [
+          {
+            "hu": "Illy Espresso Macchiato"
+          },
+          {
+            "eng": "Illy Espresso Macchiato"
+          }
+        ],
+        "size": null,
+        "price": "800",
+        "currency": [
+          {
+            "hu": "Ft"
+          },
+          {
+            "eng": "HUF"
+          }
+        ]
+      },
+      {
+        "name": [
+          {
+            "hu": "Illy Dupla Espresso"
+          },
+          {
+            "eng": "Illy Double Espresso"
+          }
+        ],
+        "size": null,
+        "price": "800",
+        "currency": [
+          {
+            "hu": "Ft"
+          },
+          {
+            "eng": "HUF"
+          }
+        ]
+      },
+      {
+        "name": [
+          {
+            "hu": "Illy Capucino"
+          },
+          {
+            "eng": "Illy Cappuccino"
+          }
+        ],
+        "size": null,
+        "price": "800",
+        "currency": [
+          {
+            "hu": "Ft"
+          },
+          {
+            "eng": "HUF"
+          }
+        ]
+      },
+      {
+        "name": [
+          {
+            "hu": "Illy Hosszú Kávé"
+          },
+          {
+            "eng": "Illy Long Espresso / American Coffe"
+          }
+        ],
+        "size": null,
+        "price": "700",
+        "currency": [
+          {
+            "hu": "Ft"
+          },
+          {
+            "eng": "HUF"
+          }
+        ]
+      },
+      {
+        "name": [
+          {
+            "hu": "Illy Tejeskávé"
+          },
+          {
+            "eng": "Illy Caffé Latte"
+          }
+        ],
+        "size": null,
+        "price": "800",
+        "currency": [
+          {
+            "hu": "Ft"
+          },
+          {
+            "eng": "HUF"
+          }
+        ]
+      },
+      {
+        "name": [
+          {
+            "hu": "Illy Latte Macchiato"
+          },
+          {
+            "eng": "Illy Latte Macchiato"
+          }
+        ],
+        "size": null,
+        "price": "800",
+        "currency": [
+          {
+            "hu": "Ft"
+          },
+          {
+            "eng": "HUF"
+          }
+        ]
+      }
+    ]
+  }
+]

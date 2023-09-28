@@ -1,5 +1,6 @@
 import menu from "../menu.json";
 import { useEffect, useRef, useState } from "react";
+import Dish from "./dish";
 
 const ShowMenu = ({ lang, setScrollTo }) => {
   // eslint-disable-next-line no-unused-vars
@@ -37,19 +38,7 @@ const ShowMenu = ({ lang, setScrollTo }) => {
                 )}
                 <div>
                   {category.items.map((dish, index) => (
-                    
-                    <div key={index}>
-                      <div className="dish">{dish[lang]}</div>
-                      <div className="price">
-                        <i>
-                          {dish["price"]}
-                          {dish["currency"].map((curr, index) => (
-                            <span key={index}> {curr[lang]}</span>
-                          ))}
-                        </i>
-                        <div className="divider-line" />
-                      </div>
-                    </div>
+                    <Dish key={index} dish={dish} index={index} lang={lang} />
                   ))}
                 </div>
               </div>
