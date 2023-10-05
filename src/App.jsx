@@ -1,12 +1,17 @@
 import { useRef } from "react";
 import { useState, useEffect } from "react";
-import "./App.css";
+
+// importing css
+// import "./css/variables.css";
+import "./css/App.css";
+
+//
 import Footer from "./footer/footer";
 import Header from "./header/header";
 import LanguagePicker from "./languagePicker/languagePicker";
 
 import ShowMenu from "./showMenu/showMenu";
-import StickyUpButton from "./stickyUpButton/stickyUpButton";
+// import StickyUpButton from "./stickyUpButton/stickyUpButton";
 import OpeningTimes from "./openingTimes/openingTimes";
 
 function App() {
@@ -33,7 +38,7 @@ function App() {
 
   return (
     <div className="App" ref={appRef}>
-      <StickyUpButton />
+      {/*       <StickyUpButton />       */}
       <Header selectedLanguage={selectedLanguage} />
 
       <OpeningTimes />

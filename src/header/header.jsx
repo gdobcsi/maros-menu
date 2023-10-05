@@ -1,10 +1,11 @@
+import "./header.css";
+
 // import ClockIcon from "./icons/clock";
 import ClockIcon from "../header/icons/clock";
 import PhoneIcon from "../header/icons/phone";
-const Header = ({selectedLanguage}) => {
-
+const Header = ({ selectedLanguage }) => {
   //
-  console.log("header: ", selectedLanguage)
+  console.log("header: ", selectedLanguage);
   return (
     <header className="header">
       <h2>Maros Étterem</h2>
