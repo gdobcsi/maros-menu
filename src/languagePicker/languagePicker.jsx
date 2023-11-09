@@ -1,3 +1,5 @@
+import "./languagePicker.css";
+
 import LanguageBox from "./languageBox";
 import LanguagesSetup from "../languages.json";
 

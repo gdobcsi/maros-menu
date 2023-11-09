@@ -1,3 +1,5 @@
+import "./languageBox.css";
+
 const LanguageBox = ({
   setLanguage,
   setShowSelectedMenu,

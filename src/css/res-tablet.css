@@ -1,0 +1,20 @@
+/* Tablets */
+@media only screen and (min-width: 481px) {
+  .header {
+    background-color: blue;
+  }
+  .header h2 {
+    font-size: 6rem;
+  }
+  .header .city {
+    font-size: 2rem;
+  }
+  .contact-details {
+    width: 600px;
+  }
+  .language-picker {
+    width: 600px;
+
+    margin: 0 auto;
+  }
+}
