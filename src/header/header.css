@@ -34,14 +34,14 @@
 .header .city {
   /* width: 220px; */
 
-  justify-self: center;
+  /* justify-self: center; */
 
   margin: 0 -10px 0.5rem 0;
 
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 200;
   text-align: center;
-  letter-spacing: 10px;
+  letter-spacing: 7px !important;
   color: #b7612c;
   color: var(--main-text-light);
 

@@ -19,11 +19,14 @@ const PhoneAndOpeningTime = () => {
             <ClockIcon />
           </div>
           <div className="opening-text">
+            <div>Csütörtök:</div>
+            <div className="bottom-space">
+              <i>12:00 - 19:00</i>
+            </div>
             <div>Péntek, Szombat:</div>
             <div className="bottom-space">
               <i>12:00 - 20:00</i>
             </div>
-
             <div>Vasárnap:</div>
             <div>
               <i>12:00 - 19:00</i>

@@ -1,4 +1,7 @@
-import menu from "../menu.json";
+import menu from "../menu_2023_winter.json";
+
+import "./showMenu.css";
+
 import { useEffect, useRef, useState } from "react";
 
 const ShowMenu = ({ lang, setScrollTo }) => {
@@ -37,7 +40,6 @@ const ShowMenu = ({ lang, setScrollTo }) => {
                 )}
                 <div>
                   {category.items.map((dish, index) => (
-                    
                     <div key={index}>
                       <div className="dish">{dish[lang]}</div>
                       <div className="price">

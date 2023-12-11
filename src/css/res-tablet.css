@@ -1,7 +1,7 @@
 /* Tablets */
 @media only screen and (min-width: 481px) {
   .header {
-    background-color: blue;
+    /* background-color: blue; */
   }
   .header h2 {
     font-size: 6rem;

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import "./css/variables.css";
 import "./css/App.css";
 import "./css/_common-classes.css";
-// import "./css/res-tablet.css";
+import "./css/res-tablet.css";
 
 //
 import Footer from "./footer/footer";
@@ -57,7 +57,7 @@ function App() {
       {/* 
 
       Nyelv válaszó
-      
+*/}
 
       <LanguagePicker
         setScrollTo={setScrollTo}
@@ -66,14 +66,13 @@ function App() {
         showSelectedMenu={showSelectedMenu}
         setShowSelectedMenu={setShowSelectedMenu}
       />
-    */}
 
       {/*  A választott nyelv alapján a menü 
 
+*/}
       {showSelectedMenu && (
         <ShowMenu lang={selectedLanguage} setScrollTo={setScrollTo} />
       )}
-*/}
 
       <Footer />
     </div>
