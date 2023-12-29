@@ -1,0 +1,27 @@
+h2.opening-header {
+  margin-bottom: 0rem;
+
+  font-weight: 500;
+}
+
+.opening-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 200;
+}
+
+.day {
+  font-weight: 400;
+}
+
+.day-group {
+  /* outline: 1px solid red; */
+}
+
+.day-group:last-child {
+  margin-top: 0.5rem;
+}

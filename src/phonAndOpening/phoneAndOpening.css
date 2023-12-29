@@ -13,7 +13,7 @@
 
   margin: 0rem auto;
 
-  padding: 0.25rem 2rem;
+  padding: 0.25rem 2rem 0rem;
 
   /* display: grid;
   place-items: center; */
@@ -46,14 +46,22 @@
   /* text-align: left; */
   flex: 1;
 }
-.phone,
-.opening-time {
+.phone {
   margin: 0.5rem 0;
   width: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  /* outline: 1px solid #a59174; */
+}
+.opening-time {
+  /* margin: 0.5rem 0; */
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
   /* outline: 1px solid #a59174; */
 }
 .phone-box > svg {
@@ -70,26 +78,6 @@
   fill: #b7612c;
 }
 
-.opening-text {
-  margin-bottom: 0.5rem;
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.header h2 {
-  /* font-size: 10rem; */
-}
-.header .city {
-  /* font-size: 3rem; */
-  letter-spacing: 14px;
-}
-.phone,
-.opening-time {
-  /* font-size: 1.75rem; */
-}
 .phone > svg {
   width: 35px;
   height: 35px;

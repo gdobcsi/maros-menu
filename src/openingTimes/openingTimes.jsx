@@ -1,12 +1,31 @@
+import "./openingTimes.css";
+
+import ClockIcon from "../header/icons/clock";
+
 const OpeningTimes = () => {
   return (
-    <div className="flex-wrapper column flex-items-evenly-center">
-      <div>Opening times goes here</div>
-      <h2>test</h2>
-      <div>Opening times goes here</div>
-      <h2>test</h2>
-      <div>Opening times goes here</div>
-    </div>
+    <>
+      <h2 className="opening-header"> Téli Nyitvatartás:</h2>
+      <div className="opening-time">
+        {/* <div className="opening-time"> */}
+        <div className="opening-time-box">{/* <ClockIcon /> */}</div>
+        <div className="opening-text">
+          <div className="day-group">
+            <div className="day">Szombat:</div>
+            <div className="bottom-space">
+              <i>12:00 - 21:00</i>
+            </div>
+          </div>
+          <div className="day-group">
+            <div className="day">Vasárnap:</div>
+            <div className="bottom-space">
+              <i>12:00 - 19:00</i>
+            </div>
+          </div>
+        </div>
+        {/* </div> */}
+      </div>
+    </>
   );
 };
 
