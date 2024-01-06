@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1423.0763"
+   height="382.33975"
+   viewBox="0 0 376.52226 101.16073"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlnsSvg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-65.738855,-56.994453)">
+    <text
+       xmlSpace="preserve"
+       style="font-size:50.8px;letter-spacing:-0.230188px;word-spacing:1.5875px;fill:#d7814b;fill-opacity:1;stroke-width:0.264583"
+       x="64.214859"
+       y="106.62605"
+       id="text1"><tspan
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:50.8px;font-family:'Noto Serif CJK HK';-inkscape-font-specification:'Noto Serif CJK HK, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:-0.230188px;word-spacing:1.5875px;fill:#d7814b;fill-opacity:1;stroke-width:0.264583"
+         x="64.214859"
+         y="106.62605">Maros Étterem</tspan></text>
+    <path
+       id="rect3"
+       style="fill:#d7814b;fill-opacity:1;stroke-width:0.264638"
+       d="m 65.738999,123.0328 v 4.14445 H 209.78124 v -4.14445 z m 232.479761,0 v 4.14445 H 442.261 v -4.14445 z" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.7556px;font-family:'Noto Serif CJK HK';-inkscape-font-specification:'Noto Serif CJK HK, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:1.60602px;word-spacing:1.5875px;fill:#d7814b;fill-opacity:1;stroke-width:0.264583"
+       x="231.80579"
+       y="131.71336"
+       id="text2"><tspan
+         id="tspan2"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:1.60602px;stroke-width:0.264583"
+         x="231.80579"
+         y="131.71336">2005</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:FreeSerif;-inkscape-font-specification:'FreeSerif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:3.96875px;word-spacing:1.5875px;fill:#d7814b;fill-opacity:1;stroke-width:0.264583"
+       x="181.4166"
+       y="157.87862"
+       id="text3"><tspan
+         id="tspan3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.7556px;font-family:Laksaman;-inkscape-font-specification:'Laksaman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:3.96875px;stroke-width:0.264583"
+         x="181.4166"
+         y="157.87862">NAGYMAROS</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke-width:0.264583"
+       id="rect4"
+       width="74.49971"
+       height="24.056273"
+       x="215.72853"
+       y="119.82027" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke-width:0.264583"
+       id="rect5"
+       width="110.99283"
+       height="30.704079"
+       x="195.43706"
+       y="115.26875" />
+  </g>
+</svg>

@@ -1,5 +1,8 @@
 .language-picker {
-  margin: 1rem auto 5rem;
+  width: calc(100% - 2rem);
+
+  margin: 1rem 1rem 5rem;
+
   padding: 0 0 2rem;
 
   display: flex;

@@ -1,5 +1,6 @@
 .menu-button {
   width: calc(50% - 0.5rem);
+  max-width: 200px;
   /* height: auto; */
 
   padding: 1rem 0;

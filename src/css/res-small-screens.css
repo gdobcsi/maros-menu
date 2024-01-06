@@ -1,0 +1,9 @@
+/* Small screens */
+@media screen and (min-width: 769px) {
+  .App {
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    /* background-color: #fff; */
+  }
+}

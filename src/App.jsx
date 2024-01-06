@@ -6,6 +6,8 @@ import "./css/variables.css";
 import "./css/App.css";
 import "./css/_common-classes.css";
 import "./css/res-tablet.css";
+import "./css/res-small-screens.css";
+import "./css/res-large-screens.css";
 
 //
 import Footer from "./footer/footer";
