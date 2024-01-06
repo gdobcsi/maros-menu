@@ -3,6 +3,7 @@ import menu from "../menu_2023_winter.json";
 import "./showMenu.css";
 
 import { useEffect, useRef, useState } from "react";
+import Dish from "./dish";
 
 const ShowMenu = ({ lang, setScrollTo }) => {
   // eslint-disable-next-line no-unused-vars
