@@ -1,5 +1,6 @@
 import "./header.css";
-import logo from "../logo/maros_logo_web2.svg";
+
+import logo from "../components/micro&macro/logo/maros_logo_web2.svg";
 
 const Header = ({ selectedLanguage }) => {
   //

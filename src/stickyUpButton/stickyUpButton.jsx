@@ -1,8 +1,16 @@
-import "./style.css";
+import "./stickyUpButton.css";
 
-const StickyUpButton = () => {
+const StickyUpButton = ({ appRef }) => {
+  const onClickHandler = () => {
+    console.log("appTopRef from Sticky", appRef);
+    appRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
-    <button className="sticky-up-button swing-from-right">
+    <button className="sticky-up-button" onClick={() => onClickHandler()}>
       <svg
         // enable-background="new 0 0 32 32"
         height="32px"

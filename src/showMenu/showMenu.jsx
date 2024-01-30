@@ -4,8 +4,9 @@ import "./showMenu.css";
 
 import { useEffect, useRef, useState } from "react";
 import Dish from "./dish";
+import StickyUpButton from "../stickyUpButton/stickyUpButton";
 
-const ShowMenu = ({ lang, setScrollTo }) => {
+const ShowMenu = ({ lang, setScrollTo, appRef }) => {
   // eslint-disable-next-line no-unused-vars
   const [scrollPos, setScrollPos] = useState(0);
 
@@ -25,6 +26,7 @@ const ShowMenu = ({ lang, setScrollTo }) => {
 
   return (
     <div className="show-menu-wrapper">
+      <StickyUpButton setScrollTo={setScrollTo} appRef={appRef} />
       <div id="show-menu" ref={menuRef} onWheel={(ev) => onScrollHandler(ev)}>
         {lang === false ? null : lang === "fr" ? (
           <div className="coming-soon">Coming Soon.</div>
