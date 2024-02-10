@@ -16,38 +16,8 @@
 }
 
 .header-logo {
-  width: 100%;
-}
-.header h2 {
-  text-align: center;
-  margin: 0;
-
-  /* letter-spacing: 3px; */
-
-  /* Régi szöveg font */
-  /* font-family: "Dancing Script", cursive; */
-  /* font-size: 3.5rem; */
-
-  /* color: #b7612c; */
-  color: var(--main-text-color);
-
-  /* Régi szöveghez drop shadow */
-  /* filter: drop-shadow(0px 0px 26px #a59174); */
-}
-
-.header .city {
-  /* width: 220px; */
-
-  /* justify-self: center; */
-
-  margin: 0 -10px 0.5rem 0;
-
-  font-size: 1.4rem;
-  font-weight: 200;
-  text-align: center;
-  letter-spacing: 7px !important;
-  color: #b7612c;
-  color: var(--main-text-light);
-
-  /* outline: 20px solid greenyellow; */
+  /* !! Might need to change.. */
+  width: 90%;
+  /* width: 60vw; */
+  margin: 0 auto;
 }

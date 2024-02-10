@@ -1,0 +1,8 @@
+.navbar {
+  width: 100%;
+  height: var(--navbar-height);
+
+  color: blue;
+
+  border-bottom: 1px solid white;
+}
