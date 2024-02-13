@@ -7,6 +7,7 @@ const OpeningTimes = () => {
     <>
       <h2 className="opening-header"> Téli Nyitvatartás:</h2>
       <div className="opening-time">
+        {/* Test */}
         {/* <div className="opening-time"> */}
         <div className="opening-time-box">{/* <ClockIcon /> */}</div>
         <div className="opening-text">
