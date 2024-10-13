@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "marosmenu-4e924",
+    "site": "testdeploy-65883",
     "public": "build",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [

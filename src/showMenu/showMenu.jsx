@@ -1,4 +1,5 @@
-import menu from "../menu_2023_winter.json";
+// import menu from "../menu_2023_winter.json";
+import menu from "../menu.json";
 
 import "./showMenu.css";
 
