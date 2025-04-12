@@ -12,10 +12,6 @@ const OpeningTimes = () => {
         <div className="opening-time-box">{/* <ClockIcon /> */}</div>
         <div className="opening-text">
           <div className="day-group">
-            <div className="day">Szerda:</div>
-            <div className="bottom-space">
-              <i>12:00 - 20:00</i>
-            </div>
             <div className="day">Csütörtök:</div>
             <div className="bottom-space">
               <i>12:00 - 20:00</i>
