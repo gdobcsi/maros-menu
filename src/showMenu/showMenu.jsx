@@ -1,6 +1,6 @@
 // import menu from "../menu_2023_winter.json";
 // import menu from "../menu_2024_winter.json";
-import menu from "../menu_2025_summer.json";
+import menu from "../menu_2025_winter.json";
 
 import "./showMenu.css";
 
@@ -47,6 +47,15 @@ const ShowMenu = ({ lang, setScrollTo, appRef }) => {
                   {category.items.map((dish, index) => (
                     <div key={index}>
                       <div className="dish">{dish[lang]}</div>
+                      {/*                       <div className="dish-allergies">
+                        {dish["allergies"].map((allergy, index) => (
+                          <div key={index} className="allergy">
+                            {allergy}
+                          </div>
+                        ))}
+
+                        {/* ( {dish["allergies"]} ) 
+                      </div> */}
                       <div className="price">
                         <i>
                           {dish["price"]}
