@@ -9,14 +9,10 @@ const OpeningTimes = () => {
       <div className="opening-time">
         {/* Test */}
         {/* <div className="opening-time"> */}
-        <div className="opening-time-box">{/* <ClockIcon /> */}</div>
+        <div className="opening-time-box">
+          <ClockIcon />
+        </div>
         <div className="opening-text">
-          <div className="day-group">
-            <div className="day">Péntek:</div>
-            <div className="bottom-space">
-              <i>12:00 - 20:00</i>
-            </div>
-          </div>
           <div className="day-group">
             <div className="day">Szombat:</div>
             <div className="bottom-space">
