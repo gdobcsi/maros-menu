@@ -5,11 +5,38 @@ import ClockIcon from "../header/icons/clock";
 const OpeningTimes = () => {
   return (
     <>
-      <h2 className="opening-header"> Téli Nyitvatartás:</h2>
+      <h2 className="opening-header">Nyitvatartás:</h2>
       <div className="opening-time">
+        {/* Test */}
         {/* <div className="opening-time"> */}
-        <div className="opening-time-box">{/* <ClockIcon /> */}</div>
+        <div className="opening-time-box">
+          <ClockIcon />
+        </div>
         <div className="opening-text">
+          <div className="day-group">
+            <div className="day">Kedd:</div>
+            <div className="bottom-space">
+              <i>12:00 - 19:00</i>
+            </div>
+          </div>
+          <div className="day-group">
+            <div className="day">Szerda:</div>
+            <div className="bottom-space">
+              <i>12:00 - 19:00</i>
+            </div>
+          </div>
+          <div className="day-group">
+            <div className="day">Csütörtök:</div>
+            <div className="bottom-space">
+              <i>12:00 - 20:00</i>
+            </div>
+          </div>
+          <div className="day-group">
+            <div className="day">Péntek:</div>
+            <div className="bottom-space">
+              <i>12:00 - 21:00</i>
+            </div>
+          </div>
           <div className="day-group">
             <div className="day">Szombat:</div>
             <div className="bottom-space">
@@ -19,7 +46,7 @@ const OpeningTimes = () => {
           <div className="day-group">
             <div className="day">Vasárnap:</div>
             <div className="bottom-space">
-              <i>12:00 - 19:00</i>
+              <i>12:00 - 20:00</i>
             </div>
           </div>
         </div>

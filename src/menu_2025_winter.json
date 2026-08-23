@@ -1,0 +1,755 @@
+[
+    {
+        "category": [
+            {
+                "hu": "Levesek"
+            },
+            {
+                "eng": "Soups"
+            },
+            {
+                "de": "Suppen"
+            }
+        ],
+        "items": [
+            {
+                "hu": "Bableves füstölt csülökkel",
+                "eng": "Hungarian Bean Soup with Smoked Ham Hock( pork knuckle)",
+                "de": "Bohnensuppe mit geräucherten Haxen( Ungarische Bohnensuppe mit geräucherter Schinkenkeule)",
+                "price": 3000,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Gulyásleves",
+                "eng": "“Goulash” Soup",
+                "de": "Gulaschsuppe",
+                "price": 3300,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Marhahúsleves eprlevéllel",
+                "eng": "Hungarian Beef Broth with veggies and pasta",
+                "de": "Rinderbrühe mit Erdbeerblättern( Ungarische Rinderbrühe mit Gemüse und Nudeln)",
+                "price": 2500,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Tákonyos csirkeragu leves",
+                "eng": "Chicken Tarragon Soup with Cream",
+                "de": "Hühner-Estragon-Suppe mit Sahne",
+                "price": 3000,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Halászlé ponytfilével",
+                "eng": "Hungarian Fish Soup with Carp Fillets",
+                "de": "Ungarische Fischsuppe mit Karpfenfilet",
+                "price": 4700,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Halászlé harcsafilével",
+                "eng": "Hungarian Fish Soup with Catfish Fillets",
+                "de": "Fischsuppe mit Welsfilet",
+                "price": 5900,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": [
+            {
+                "hu": "Főételek"
+            },
+            {
+                "eng": "Main Courses"
+            },
+            {
+                "de": "Hauptgerichte"
+            }
+        ],
+        "items": [
+            {
+                "hu": "Rántott sajt vegyes körettel(trappista vagy camambert)",
+                "eng": "Deep Fried “Trappist”(portsalute) or Camembert served with Rice and Fries",
+                "de": "Käse( Trappist oder Camembert) gebacken, serviert mit Reis und Pommes",
+                "price": 3900,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Csirkemell roston fokhagymamártással és vegyes körettel",
+                "eng": "Roasted Chicken Breast, Creamy Garlic Sauce with Rice and Fries",
+                "de": "Gegrillte Hähnchenbrust mit Knoblauchsauce, serviert mit Reis und Pommes",
+                "price": 6000,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Fűszeres csirke steak sült zöldségekkel",
+                "eng": "Roasted Chicken Breast and Grilled Vegetables",
+                "de": "Würziges Hähnchensteak mit gegrilltem Gemüse",
+                "price": 6000,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Kijevi csirkemell vegyes körettel",
+                "eng": "“Chicken Kyiv” aka Chicken 'Kiev Style'(Chicken Breast filled with Butter, Mustard and Cheese, served with Rice and Fries)",
+                "de": "Chicken Kiew( Hähnchenbrust gefüllt mit Buttersenf und Käse, dazu Reis und Pommes)",
+                "price": 6000,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Steak kéksajttal, csípős hagymalekvárral és édesburgonyával",
+                "eng": "Fillet Steak with Roquefort, Homemade Spicy Onion Jam and Sweet Potato",
+                "de": "Steak mit Blauschimmelkäse, würziger Zwiebelmarmelade und Süsskartoffel( Filetsteak mit Roquefort, hausgemachter würziger Zwiebelmarmelade und Süsskartoffel)",
+                "price": 9100,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Lyoni steak sült burgonyával",
+                "eng": "Fillet Steak “Lyon”(Crispy, Thin Onion) served with Fries",
+                "de": "Filet - Steak “ Lyon” mit Bratkartoffeln( Filet - Steak “ Lyon” mit knusprigen Zwiebeln und Pommes serviert)",
+                "price": 9100,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Bélszínragu erdei gombával és dödöllével",
+                "eng": "Fillet Steak Stripes with Cream, Wild Mushrooms and Hungarian Potato Dumplings",
+                "de": "Rinderfiletstreifen mit Sahne, Waldpilzen und ungarischen Kartoffelknödeln",
+                "price": 8200,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Maros göngyölt vegyes körettel(sertésborda töltve sajtal, sonkával és gombával)",
+                "eng": "“Maros Göngyölt”(Pork Kotlet Filled with Cheese, Ham and Mushroom, served with Rice and Fries)",
+                "de": "“ Maros Göngyölt” mit gemischter Beilage( Schweinekotelett gefüllt mit Käse, Schinken und Pilzen, serviert mit Reis und Pommes)",
+                "price": 6500,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Kisbojtár kedvence(cigánypecsenye, vas serpenyőben pirított túrós csuszával)",
+                "eng": "“Kisbojtár’s Favourite”(Grilled Kotlet with Garlic and Crispy Lardon, served with Hungarian Square pasta, Cottage Cheese and Crispy Bacon)",
+                "de": "“ Lieblingsspeise von Kisbojtár”( Zigeunerbraten mit in einer Eisenpfanne gerösteten Topfenfleckern)",
+                "price": 6500,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Bécsi szelet petrezselymes burgonyával",
+                "eng": "“Viennese Schnitzel” served with Sauteéd Potatoes and Parsley",
+                "de": "Wiener Schnitzel serviert mit Bratkartoffeln und Petersilie",
+                "price": 6600,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Baconbe tekert szűzérmék grillen sütve, sült zöldségekkel",
+                "eng": "Tenderloin Medallions Screwer(Wrapped in Bacon), served with Grilled Vegetables",
+                "de": "Schweinmedallions in Bacon serviert mit gegrilltem Gemüse",
+                "price": 6600,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Malac pofa pecsenye, párolt káposztával és hagymás tört burgonyával",
+                "eng": "Slow Roasted Pork Cheeks with Braised Cabbage and Onion-Mashed Potatoes",
+                "de": "Langsam gebratene Schweinebacken mit gedämpftem Kohl und Zwiebelnkartoffeln",
+                "price": 5700,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Sült kacsa comb párolt káposztával és hagymás burgonyával",
+                "eng": "Slow Cooked Duck Legs with Braised Red Cabbage and Onion-Mashed Potatoes",
+                "de": "Gebratene Entenkeule mit gedämpftem Kohl und Zwiebelnkartoffeln",
+                "price": 6500,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Csülök Pékné módra",
+                "eng": "“Pékné Style” Pork Knuckle( Slow Roasted Pork Knuckle served with Potatoes",
+                "de": "Schweinehaxe nach Pékné Art( langsam gebratene Schweinehaxe serviert mit gedämpftem Kohl und Kartoffelpüree)",
+                "price": 6500,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Marha pörkölt, főtt burgonyával",
+                "eng": "Beef Stew, served with Boiled Potatoes",
+                "de": "Rindereintopf, serviert mit Salzkartoffeln",
+                "price": 4900,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Vadas marha zsemlegombóccal",
+                "eng": "'Vadas' Style Beef aka 'Hunter’s Beef' – Slow Cooked Beef Served with Hungarian bread dumpling all Coated in a Creamy Carrot Sauce",
+                "de": "Sauerbraten mit Semmelknödeln",
+                "price": 4900,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Két személyes Maros tál( Maros göngyölt, szűzérem baconbe tekerve, csirkemell grillezve, rántott sajt, rántott ponty, tartár mártás és vegyek köret)",
+                "eng": "Maros Plate for Two (“Maros Göngyölt“(see above), Tenderloin Medallinons in Bacon, Grilled Chicken Fillets, Deep Fried Cheeses, Deep Fried Carp Fillets, Hungarian Tartar Sauce, Rice and Fries)",
+                "de": "Maros Teller für 2 Personen( “Maros Göngyölt” /siehe oben/ Filetmedaillons im Speckmantel, Hähnchenfilets gegrillt, Käse gebacken, Karpfenfilets gebacken, Remoulade, Reis und Pommes)",
+                "price": 13200,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": [
+            {
+                "hu": "Halételek"
+            },
+            {
+                "eng": "Fish Courses"
+            },
+            {
+                "de": "Fischgerichte"
+            }
+        ],
+        "items": [
+            {
+                "hu": "Két személyes haltál(lazac roston, ponyt rántva, pisztráng grillezve, fűszeres fogas falatkák,vegyes köret és tartár mártás)",
+                "eng": "Fish Plate for Two(Salmon, Whole Trout, Carp, Pike, Hungarian Tartar Sauce, Rice and Fries)",
+                "de": "Fischplatte für 2 Personen( gegrillter Lachs, gebratener Karpfen, gegrillte Forelle, würziger Zander, ungarische Tartarsauce, Reis und Pommes )",
+                "price": 13200,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Ponytfilé rántva vegyes körettel és tartármártással",
+                "eng": "Deep Fried Carp Fillets, Rice and Fries, served with Hungarian Tartar Sauce)",
+                "de": "Gebratener Karpfenfilet, Reis und Pommes, serviert mit ungarischer Remoulade",
+                "price": 5500,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Harcsa rántva vegyes körettel és tartármártással",
+                "eng": "Deep Fried Catfish Fillets, Rice and Fries, served with Hungarian Tartar Sauce",
+                "de": "Gebratener Wels, Reis und Pommes, serviert mit ungarischer Remoulade",
+                "price": 7200,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Harcsapaprikás túrós csuszával",
+                "eng": "Catfish Stew, served with Hungarian Square pasta, Cottage Cheese and Crispy Bacon",
+                "de": "Welspaprikas, serviert mit Topfenfleckerln",
+                "price": 7200,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Pisztáng egészben sütve vajas burgonyával",
+                "eng": "Whole Baked Trout served with Buttered Potatoes",
+                "de": "Ganze Forelle gebacken, serviert mit Butterkartoffeln",
+                "price": 7000,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Lazac filé színes borssal grillezve, sült zöldségekkel",
+                "eng": "Filet of Salmon Grilled with Peppercorn and Grilled Vegetables",
+                "de": "Gegrilltes Lachsfilet mit Pfefferkörnern und gegrilltem Gemüse",
+                "price": 7000,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Fogasfilé roston sütve fokhagymás garnélával, vajas burgonyával",
+                "eng": "Grilled Pike Fillet with Garlic Shrimps and Buttered Potatoes",
+                "de": "Gegrilltes Zanderfilet mit Knoblauchgarnelen und Butterkartoffeln",
+                "price": 7000,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Fogas falatok paradicsomos pennével",
+                "eng": "Grilled Pike Fillet Strips with Tomato Penne",
+                "de": "Zanderfiletstreifen mit Tomatenpenne",
+                "price": 6500,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": [
+            {
+                "hu": "Tészták"
+            },
+            {
+                "eng": "Pasta"
+            },
+            {
+                "de": "Nudeln"
+            }
+        ],
+        "items": [
+            {
+                "hu": "Paradicsomos penne parmezánnal és rántott szűzérmékkel",
+                "eng": "Penne in Tomato Sauce with Parmesan and Deep Fried Tenderloin Medallions",
+                "de": "Penne in Tomatensauce mit Parmesan und gebackenen Schweinefiletmedaillons",
+                "price": 6200,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Juhtúrós sztrapacska, szalonna pörccel",
+                "eng": "Soft Douh Noodle with potato, Sheep Cheese, Sour Cream and Crispy Bacon",
+                "de": "Sztrapacska(Teigwaren mit Kartoffeln, Schafskäse, Sauerrahm und knusprigem Speck)",
+                "price": 4200,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Túrós Csusza",
+                "eng": "Hungarian Square pasta, Cottage Cheese and Crispy Bacon",
+                "de": "Ungarische Topfenfleckerln mit knusprigem Speck",
+                "price": 4000,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": [
+            {
+                "hu": "Saláták"
+            },
+            {
+                "eng": "Side Salads"
+            },
+            {
+                "de": "Salate"
+            }
+        ],
+        "items": [
+            {
+                "hu": "Uborkasaláta",
+                "eng": "Cucumber Salad",
+                "de": "Gurkensalat",
+                "price": 900,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Hagymás káposzta saláta",
+                "eng": "Cabbage and Onion Salad",
+                "de": "Kohl-und Zwiebelsalat",
+                "price": 900,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Kovászos uborka",
+                "eng": "Fermented Cucumber Salad",
+                "de": "Fermentierte Gurken",
+                "price": 900,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": [
+            {
+                "hu": "Desszertek"
+            },
+            {
+                "eng": "Desserts"
+            },
+            {
+                "de": "Nachtisch"
+            }
+        ],
+        "items": [
+            {
+                "hu": "Palacsinta(3db) -(ízes, túrós és nutellás)",
+                "eng": "Hungarian Pancackes(3 pcs, Choices of Yours: Jam, Sweet Cottage Cream, Nutella)",
+                "de": "Ungarische Pfannkuchen( 3 Stk. mit Marmelade, Quark, Nutella)",
+                "price": 1800,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            },
+            {
+                "hu": "Sajttorta gyümölcszselével",
+                "eng": "Cheesecake with Fruit Jelly",
+                "de": "Käsetorte mit Fruchtgelee",
+                "price": 2400,
+                "currency": [
+                    {
+                        "hu": "Ft"
+                    },
+                    {
+                        "eng": "HUF"
+                    },
+                    {
+                        "de": "HUF"
+                    }
+                ]
+            }
+        ]
+    }
+]

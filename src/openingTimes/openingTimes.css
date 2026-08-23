@@ -5,6 +5,7 @@ h2.opening-header {
 }
 
 .opening-text {
+  margin-top: 0.5rem;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -23,5 +24,5 @@ h2.opening-header {
 }
 
 .day-group:last-child {
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
 }
