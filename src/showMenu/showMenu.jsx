@@ -1,6 +1,6 @@
 // import menu from "../menu_2023_winter.json";
 // import menu from "../menu_2024_winter.json";
-import menu from "../menu_2025_winter.json";
+import menu from "../menu_2026_summer.json";
 
 import "./showMenu.css";
 
@@ -41,7 +41,7 @@ const ShowMenu = ({ lang, setScrollTo, appRef }) => {
                     <h2 key={index} className="category-title">
                       {language[lang]}
                     </h2>
-                  ) : null
+                  ) : null,
                 )}
                 <div>
                   {category.items.map((dish, index) => (
