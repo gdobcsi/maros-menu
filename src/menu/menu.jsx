@@ -16,17 +16,10 @@ const Menu = ({ lang, setScrollTo, appRef }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const onScrollHandler = (ev) => {
-    // console.log(menuRef.current.scrollTop);
-    // setScrollPos(menuRef.current.clientHeight);
-    // console.log(window.innerHeight);
-    // console.log(menuRef.current);
-  };
-
   return (
     <div className="show-menu-wrapper">
       <StickyUpButton setScrollTo={setScrollTo} appRef={appRef} />
-      <div id="show-menu" ref={menuRef} onWheel={(ev) => onScrollHandler(ev)}>
+      <div id="show-menu" ref={menuRef}>
         {menu.map((category, index) => (
           <div key={index} className="category">
             {category.category.map((language, index) =>
