@@ -4,14 +4,11 @@ import menu from "../menu_2026_summer.json";
 
 import "./menu.css";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Dish from "./dish";
 import StickyUpButton from "../stickyUpButton/stickyUpButton";
 
 const Menu = ({ lang, setScrollTo, appRef }) => {
-  // eslint-disable-next-line no-unused-vars
-  const [scrollPos, setScrollPos] = useState(0);
-
   let menuRef = useRef();
 
   useEffect(() => {
