@@ -23,7 +23,7 @@ const Menu = ({ lang, setScrollTo, appRef }) => {
         {menu.map((category, index) => (
           <div key={index} className="category">
             {category.category.map((language, index) =>
-              Object.keys(language).toString() === lang ? (
+              lang in language ? (
                 <h2 key={index} className="category-title">
                   {language[lang]}
                 </h2>
