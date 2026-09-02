@@ -30,30 +30,24 @@ const Menu = ({ lang, setScrollTo, appRef }) => {
     <div className="show-menu-wrapper">
       <StickyUpButton setScrollTo={setScrollTo} appRef={appRef} />
       <div id="show-menu" ref={menuRef} onWheel={(ev) => onScrollHandler(ev)}>
-        {lang === false ? null : lang === "fr" ? (
-          <div className="coming-soon">Coming Soon.</div>
-        ) : (
-          <>
-            {menu.map((category, index) => (
-              <div key={index} className="category">
-                {category.category.map((language, index) =>
-                  Object.keys(language).toString() === lang ? (
-                    <h2 key={index} className="category-title">
-                      {language[lang]}
-                    </h2>
-                  ) : null,
-                )}
-                <div>
-                  {category.items.map((dish, index) => (
-                    <div key={index}>
-                      <Dish dish={dish} lang={lang} />
-                    </div>
-                  ))}
+        {menu.map((category, index) => (
+          <div key={index} className="category">
+            {category.category.map((language, index) =>
+              Object.keys(language).toString() === lang ? (
+                <h2 key={index} className="category-title">
+                  {language[lang]}
+                </h2>
+              ) : null,
+            )}
+            <div>
+              {category.items.map((dish, index) => (
+                <div key={index}>
+                  <Dish dish={dish} lang={lang} />
                 </div>
-              </div>
-            ))}
-          </>
-        )}
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
