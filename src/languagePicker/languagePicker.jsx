@@ -3,7 +3,7 @@ import "./languagePicker.css";
 import LanguageBox from "./languageBox";
 import LanguagesSetup from "../languages.json";
 
-const LanguagePicker = ({
+const LanguageSelector = ({
   setLanguage,
   setShowSelectedMenu,
   setScrollTo,
@@ -29,4 +29,4 @@ const LanguagePicker = ({
   );
 };
 
-export default LanguagePicker;
+export default LanguageSelector;

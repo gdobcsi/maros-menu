@@ -10,7 +10,7 @@ import "./css/res-large-screens.css";
 
 //
 import Header from "./header/header";
-import LanguagePicker from "./languagePicker/languagePicker";
+import LanguageSelector from "./languagePicker/languagePicker";
 import Footer from "./components/micro&macro/footer/footer";
 
 import Menu from "./menu/menu";
@@ -49,7 +49,7 @@ function App() {
         {/* <Navbar /> */}
         <Header selectedLanguage={selectedLanguage} />
         <PhoneAndOpeningTime />
-        <LanguagePicker
+        <LanguageSelector
           setScrollTo={setScrollTo}
           scrollTo={scrollTo}
           setLanguage={setSelectedLanguage}
