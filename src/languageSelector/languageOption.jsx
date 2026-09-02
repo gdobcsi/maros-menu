@@ -1,4 +1,4 @@
-import "./languageBox.css";
+import "./languageOption.css";
 
 const LanguageOption = ({
   setLanguage,

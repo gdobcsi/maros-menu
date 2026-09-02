@@ -1,6 +1,6 @@
 import "./languageSelector.css";
 
-import LanguageOption from "./languageBox";
+import LanguageOption from "./languageOption";
 import LanguagesSetup from "../languages.json";
 
 const LanguageSelector = ({
