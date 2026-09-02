@@ -13,7 +13,7 @@ import Header from "./header/header";
 import LanguagePicker from "./languagePicker/languagePicker";
 import Footer from "./components/micro&macro/footer/footer";
 
-import ShowMenu from "./showMenu/showMenu";
+import Menu from "./showMenu/showMenu";
 import PhoneAndOpeningTime from "./phonAndOpening/phoneAndOpening";
 // import Navbar from "./components/micro&macro/navbar/navbar";
 
@@ -57,7 +57,7 @@ function App() {
           setShowSelectedMenu={setShowSelectedMenu}
         />
         {showSelectedMenu && (
-          <ShowMenu
+          <Menu
             lang={selectedLanguage}
             setScrollTo={setScrollTo}
             appRef={appTopRef}
