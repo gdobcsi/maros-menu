@@ -10,7 +10,7 @@ import "./css/res-large-screens.css";
 
 //
 import Header from "./header/header";
-import LanguageSelector from "./languagePicker/languagePicker";
+import LanguageSelector from "./languageSelector/languageSelector";
 import Footer from "./components/micro&macro/footer/footer";
 
 import Menu from "./menu/menu";

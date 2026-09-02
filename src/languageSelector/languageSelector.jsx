@@ -1,4 +1,4 @@
-import "./languagePicker.css";
+import "./languageSelector.css";
 
 import LanguageBox from "./languageBox";
 import LanguagesSetup from "../languages.json";
