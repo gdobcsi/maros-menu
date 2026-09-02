@@ -13,7 +13,7 @@ import Header from "./header/header";
 import LanguagePicker from "./languagePicker/languagePicker";
 import Footer from "./components/micro&macro/footer/footer";
 
-import Menu from "./showMenu/showMenu";
+import Menu from "./menu/menu";
 import PhoneAndOpeningTime from "./phonAndOpening/phoneAndOpening";
 // import Navbar from "./components/micro&macro/navbar/navbar";
 

@@ -2,7 +2,7 @@
 // import menu from "../menu_2024_winter.json";
 import menu from "../menu_2026_summer.json";
 
-import "./showMenu.css";
+import "./menu.css";
 
 import { useEffect, useRef, useState } from "react";
 import Dish from "./dish";
