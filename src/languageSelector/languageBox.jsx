@@ -1,6 +1,6 @@
 import "./languageBox.css";
 
-const LanguageBox = ({
+const LanguageOption = ({
   setLanguage,
   setShowSelectedMenu,
   scrollTo,
@@ -45,4 +45,4 @@ const LanguageBox = ({
   );
 };
 
-export default LanguageBox;
+export default LanguageOption;

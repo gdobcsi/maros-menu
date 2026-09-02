@@ -1,6 +1,6 @@
 import "./languageSelector.css";
 
-import LanguageBox from "./languageBox";
+import LanguageOption from "./languageBox";
 import LanguagesSetup from "../languages.json";
 
 const LanguageSelector = ({
@@ -12,7 +12,7 @@ const LanguageSelector = ({
   return (
     <div className="language-picker">
       {LanguagesSetup.map((language) => (
-        <LanguageBox
+        <LanguageOption
           key={language.title}
           setLanguage={setLanguage}
           setShowSelectedMenu={setShowSelectedMenu}
