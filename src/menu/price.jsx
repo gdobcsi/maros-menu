@@ -1,11 +1,10 @@
-const Price = ({ dish, lang }) => {
+// price.jsx
+
+const Price = ({ price, currency }) => {
   return (
     <div className="price">
       <i>
-        {dish["price"]}
-        {dish["currency"].map((curr, index) => (
-          <span key={index}> {curr[lang]}</span>
-        ))}
+        {price} <span>{currency}</span>
       </i>
     </div>
   );

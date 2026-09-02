@@ -46,25 +46,7 @@ const Menu = ({ lang, setScrollTo, appRef }) => {
                 <div>
                   {category.items.map((dish, index) => (
                     <div key={index}>
-                      <div className="dish">{dish[lang]}</div>
-                      {/*                       <div className="dish-allergies">
-                        {dish["allergies"].map((allergy, index) => (
-                          <div key={index} className="allergy">
-                            {allergy}
-                          </div>
-                        ))}
-
-                        {/* ( {dish["allergies"]} ) 
-                      </div> */}
-                      <div className="price">
-                        <i>
-                          {dish["price"]}
-                          {dish["currency"].map((curr, index) => (
-                            <span key={index}> {curr[lang]}</span>
-                          ))}
-                        </i>
-                        <div className="divider-line" />
-                      </div>
+                      <Dish dish={dish} lang={lang} />
                     </div>
                   ))}
                 </div>
