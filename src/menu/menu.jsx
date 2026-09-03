@@ -16,19 +16,20 @@ const Menu = ({ lang, setScrollTo, appRef }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const categoryHeader = (titles, lang) => {
+    const title = titles.find((title) => lang in title);
+    return title[lang];
+  };
+
   return (
     <div className="show-menu-wrapper">
       <StickyUpButton setScrollTo={setScrollTo} appRef={appRef} />
       <div id="show-menu" ref={menuRef}>
         {menu.map((category, index) => (
           <div key={index} className="category">
-            {category.category.map((language, index) =>
-              lang in language ? (
-                <h2 key={index} className="category-title">
-                  {language[lang]}
-                </h2>
-              ) : null,
-            )}
+            <h2 className="category-title">
+              {categoryHeader(category.category, lang)}
+            </h2>
             <div>
               {category.items.map((dish, index) => (
                 <div key={index}>
