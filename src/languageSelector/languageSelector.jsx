@@ -3,19 +3,13 @@ import "./languageSelector.css";
 import LanguageOption from "./languageOption";
 import LanguagesSetup from "../languages.json";
 
-const LanguageSelector = ({
-  setLanguage,
-  setShowSelectedMenu,
-  setScrollTo,
-  scrollTo,
-}) => {
+const LanguageSelector = ({ setLanguage, setScrollTo, scrollTo }) => {
   return (
     <div className="language-picker">
       {LanguagesSetup.map((language) => (
         <LanguageOption
           key={language.title}
           setLanguage={setLanguage}
-          setShowSelectedMenu={setShowSelectedMenu}
           language={language.language}
           scrollTo={scrollTo}
           setScrollTo={setScrollTo}
