@@ -14,8 +14,7 @@ import PhoneAndOpeningTime from "./phonAndOpening/phoneAndOpening";
 import LanguageSelector from "./languageSelector/languageSelector";
 import Menu from "./menu/menu";
 import Footer from "./components/micro&macro/footer/footer";
-
-// import Navbar from "./components/micro&macro/navbar/navbar";
+//
 import getLanguageMenu from "./utils/menu/getLanguageMenu";
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
   const [appTopRef, setAppTopRef] = useState(null);
   const [scrollTo, setScrollTo] = useState(null);
   const [selectedLanguage, setSelectedLanguage] = useState(null);
-  const [showSelectedMenu, setShowSelectedMenu] = useState(false);
 
   useEffect(() => {
     setAppTopRef(appRef);
@@ -57,10 +55,8 @@ function App() {
           setScrollTo={setScrollTo}
           scrollTo={scrollTo}
           setLanguage={setSelectedLanguage}
-          showSelectedMenu={showSelectedMenu}
-          setShowSelectedMenu={setShowSelectedMenu}
         />
-        {showSelectedMenu && (
+        {selectedLanguage && (
           <Menu
             menu={transformedMenu}
             setScrollTo={setScrollTo}
