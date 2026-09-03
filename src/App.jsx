@@ -10,13 +10,13 @@ import "./css/res-large-screens.css";
 
 //
 import Header from "./header/header";
+import PhoneAndOpeningTime from "./phonAndOpening/phoneAndOpening";
 import LanguageSelector from "./languageSelector/languageSelector";
+import Menu from "./menu/menu";
 import Footer from "./components/micro&macro/footer/footer";
 
-import Menu from "./menu/menu";
-import PhoneAndOpeningTime from "./phonAndOpening/phoneAndOpening";
-import getLanguageMenu from "./utils/menu/getLanguageMenu";
 // import Navbar from "./components/micro&macro/navbar/navbar";
+import getLanguageMenu from "./utils/menu/getLanguageMenu";
 
 function App() {
   const appRef = useRef();
@@ -44,7 +44,7 @@ function App() {
   }, [scrollTo, selectedLanguage]);
 
   // Testing getLanguageMenu modul
-  console.log(getLanguageMenu(selectedLanguage));
+  const transformedMenu = getLanguageMenu(selectedLanguage);
 
   //
   return (
@@ -62,7 +62,7 @@ function App() {
         />
         {showSelectedMenu && (
           <Menu
-            lang={selectedLanguage}
+            menu={transformedMenu}
             setScrollTo={setScrollTo}
             appRef={appTopRef}
           />
