@@ -15,6 +15,7 @@ import Footer from "./components/micro&macro/footer/footer";
 
 import Menu from "./menu/menu";
 import PhoneAndOpeningTime from "./phonAndOpening/phoneAndOpening";
+import getLanguageMenu from "./utils/menu/getLanguageMenu";
 // import Navbar from "./components/micro&macro/navbar/navbar";
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
 
   const [appTopRef, setAppTopRef] = useState(null);
   const [scrollTo, setScrollTo] = useState(null);
-  const [selectedLanguage, setSelectedLanguage] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState(null);
   const [showSelectedMenu, setShowSelectedMenu] = useState(false);
 
   useEffect(() => {
@@ -41,6 +42,9 @@ function App() {
   useEffect(() => {
     console.log(appRef.current.clientHeight);
   }, [scrollTo, selectedLanguage]);
+
+  // Testing getLanguageMenu modul
+  console.log(getLanguageMenu(selectedLanguage));
 
   //
   return (
