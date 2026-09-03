@@ -2,7 +2,6 @@ import "./languageOption.css";
 
 const LanguageOption = ({
   setLanguage,
-  setShowSelectedMenu,
   scrollTo,
   language,
   title,
@@ -12,8 +11,6 @@ const LanguageOption = ({
 }) => {
   //
   const onClickHandler = (language) => {
-    //
-    setShowSelectedMenu(true);
     setLanguage(language);
     //
     if (scrollTo !== null) {
