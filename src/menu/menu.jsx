@@ -32,7 +32,12 @@ const Menu = ({ menu, setScrollTo, appRef }) => {
             <h2 className="category-title">{section.category}</h2>
             <div>
               {section.items.map((dish, index) => (
-                <div key={index}>{dish.name}</div>
+                <Dish
+                  key={index}
+                  name={dish.name}
+                  price={dish.price}
+                  currency={dish.currency}
+                />
               ))}
             </div>
           </div>
