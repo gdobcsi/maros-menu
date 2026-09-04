@@ -11,17 +11,12 @@ import StickyUpButton from "../stickyUpButton/stickyUpButton";
 const Menu = ({ menu, setScrollTo, appRef }) => {
   let menuRef = useRef();
 
-  console.log(menu);
-
   useEffect(() => {
-    setScrollTo(menuRef);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  // const categoryHeader = (titles, lang) => {
-  //   const title = titles.find((title) => lang in title);
-  //   return title[lang];
-  // };
+    menuRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, [menu]);
 
   return (
     <div className="show-menu-wrapper">
