@@ -21,25 +21,12 @@ function App() {
   const appRef = useRef();
 
   const [appTopRef, setAppTopRef] = useState(null);
-  const [scrollTo, setScrollTo] = useState(null);
+
   const [selectedLanguage, setSelectedLanguage] = useState(null);
 
   useEffect(() => {
     setAppTopRef(appRef);
   }, []);
-
-  useEffect(() => {
-    if (scrollTo !== null) {
-      scrollTo.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  }, [scrollTo]);
-
-  useEffect(() => {
-    console.log(appRef.current.clientHeight);
-  }, [scrollTo, selectedLanguage]);
 
   // Testing getLanguageMenu modul
   const transformedMenu = getLanguageMenu(selectedLanguage);
@@ -51,18 +38,8 @@ function App() {
         {/* <Navbar /> */}
         <Header selectedLanguage={selectedLanguage} />
         <PhoneAndOpeningTime />
-        <LanguageSelector
-          setScrollTo={setScrollTo}
-          scrollTo={scrollTo}
-          setLanguage={setSelectedLanguage}
-        />
-        {selectedLanguage && (
-          <Menu
-            menu={transformedMenu}
-            setScrollTo={setScrollTo}
-            appRef={appTopRef}
-          />
-        )}
+        <LanguageSelector setLanguage={setSelectedLanguage} />
+        {selectedLanguage && <Menu menu={transformedMenu} appRef={appTopRef} />}
         <Footer />
       </div>
     </div>

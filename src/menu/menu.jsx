@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 import Dish from "./dish";
 import StickyUpButton from "../stickyUpButton/stickyUpButton";
 
-const Menu = ({ menu, setScrollTo, appRef }) => {
+const Menu = ({ menu, appRef }) => {
   let menuRef = useRef();
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Menu = ({ menu, setScrollTo, appRef }) => {
 
   return (
     <div className="show-menu-wrapper">
-      <StickyUpButton setScrollTo={setScrollTo} appRef={appRef} />
+      <StickyUpButton appRef={appRef} />
       <div id="show-menu" ref={menuRef}>
         {menu.map((section, index) => (
           <div key={index} className="category">

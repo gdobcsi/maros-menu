@@ -2,7 +2,6 @@ import "./languageOption.css";
 
 const LanguageOption = ({
   setLanguage,
-  scrollTo,
   language,
   title,
   year,
@@ -12,13 +11,6 @@ const LanguageOption = ({
   //
   const onClickHandler = (language) => {
     setLanguage(language);
-    //
-    if (scrollTo !== null) {
-      scrollTo.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
   };
 
   return (
