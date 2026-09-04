@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import "./css/variables.css";
 import "./css/App.css";
@@ -20,13 +20,7 @@ import getLanguageMenu from "./utils/menu/getLanguageMenu";
 function App() {
   const appRef = useRef();
 
-  const [appTopRef, setAppTopRef] = useState(null);
-
   const [selectedLanguage, setSelectedLanguage] = useState(null);
-
-  useEffect(() => {
-    setAppTopRef(appRef);
-  }, []);
 
   // Testing getLanguageMenu modul
   const transformedMenu = getLanguageMenu(selectedLanguage);
@@ -39,7 +33,7 @@ function App() {
         <Header selectedLanguage={selectedLanguage} />
         <PhoneAndOpeningTime />
         <LanguageSelector setLanguage={setSelectedLanguage} />
-        {selectedLanguage && <Menu menu={transformedMenu} appRef={appTopRef} />}
+        {selectedLanguage && <Menu menu={transformedMenu} appRef={appRef} />}
         <Footer />
       </div>
     </div>
