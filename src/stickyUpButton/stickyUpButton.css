@@ -2,7 +2,7 @@
   width: 3rem;
   height: 3rem;
 
-  position: sticky;
+  position: fixed;
   z-index: 1000;
 
   top: 85vh;
