@@ -1,9 +1,8 @@
 import "./menu.css";
 
 import { useEffect, useRef } from "react";
-import StickyUpButton from "../stickyUpButton/stickyUpButton";
 
-const Menu = ({ menu, appRef }) => {
+const Menu = ({ menu }) => {
   const menuRef = useRef();
 
   useEffect(() => {
@@ -15,7 +14,6 @@ const Menu = ({ menu, appRef }) => {
 
   return (
     <div className="show-menu-wrapper">
-      <StickyUpButton appRef={appRef} />
       <div id="show-menu" ref={menuRef}>
         {menu.map((section, index) => (
           <div key={index} className="category">

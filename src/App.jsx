@@ -14,6 +14,7 @@ import PhoneAndOpeningTime from "./phonAndOpening/phoneAndOpening";
 import LanguageSelector from "./languageSelector/languageSelector";
 import Menu from "./menu/menu";
 import Footer from "./components/micro&macro/footer/footer";
+import StickyUpButton from "./stickyUpButton/stickyUpButton";
 //
 import getLanguageMenu from "./utils/menu/getLanguageMenu";
 
@@ -33,6 +34,7 @@ function App() {
         <Header selectedLanguage={selectedLanguage} />
         <PhoneAndOpeningTime />
         <LanguageSelector setLanguage={setSelectedLanguage} />
+        <StickyUpButton appRef={appRef} />
         {selectedLanguage && <Menu menu={transformedMenu} appRef={appRef} />}
         <Footer />
       </div>
