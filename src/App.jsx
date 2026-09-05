@@ -31,7 +31,7 @@ function App() {
     <div className="App" ref={appRef}>
       <div className="App-inner-wrapper">
         {/* <Navbar /> */}
-        <Header selectedLanguage={selectedLanguage} />
+        <Header />
         <PhoneAndOpeningTime />
         <LanguageSelector setLanguage={setSelectedLanguage} />
         <StickyUpButton appRef={appRef} />
