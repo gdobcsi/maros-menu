@@ -1,15 +1,10 @@
-// import menu from "../menu_2023_winter.json";
-// import menu from "../menu_2024_winter.json";
-// import menu from "../menu_2026_summer.json";
-
 import "./menu.css";
 
 import { useEffect, useRef } from "react";
-import Dish from "./dish";
 import StickyUpButton from "../stickyUpButton/stickyUpButton";
 
 const Menu = ({ menu, appRef }) => {
-  let menuRef = useRef();
+  const menuRef = useRef();
 
   useEffect(() => {
     menuRef.current.scrollIntoView({
@@ -27,12 +22,15 @@ const Menu = ({ menu, appRef }) => {
             <h2 className="category-title">{section.category}</h2>
             <div>
               {section.items.map((dish, index) => (
-                <Dish
-                  key={index}
-                  name={dish.name}
-                  price={dish.price}
-                  currency={dish.currency}
-                />
+                <div key={index}>
+                  <div className="dish">{dish.name}</div>
+                  <div className="price">
+                    <i>
+                      {dish.price} <span>{dish.currency}</span>
+                    </i>
+                  </div>
+                  <div className="divider-line" />
+                </div>
               ))}
             </div>
           </div>
