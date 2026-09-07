@@ -1,3 +1,5 @@
+const getUID = require("./uidGenerator");
+
 const fs = require("fs");
 
 const rawdata = fs.readFileSync("../src/menu_2026_summer.json");
@@ -10,9 +12,12 @@ const newMenu = [
   },
 ];
 
+let idCounter = 1;
+
 const categories = newMenu[0].categories;
 
 menu.forEach((category) => {
+  let titleForUID = "";
   const title = {};
   const localizedTitles = category.category;
 
@@ -20,18 +25,21 @@ menu.forEach((category) => {
     for (const [key, value] of Object.entries(localizedTitle)) {
       if (key === "eng") {
         title["en"] = value;
+        titleForUID = value;
       } else {
         title[key] = value;
       }
     }
   });
 
-  /// ITEMS aka dishes
   const dishes = [];
   const sourceDishes = category.items;
 
+  console.log();
+
   sourceDishes.forEach((dish) => {
     const newDish = {};
+    newDish.uid = getUID(titleForUID, idCounter);
     for (const [key, value] of Object.entries(dish)) {
       if (key === "currency") {
         if (newMenu[0].currency === null) {
@@ -50,7 +58,6 @@ menu.forEach((category) => {
         }
       } else {
         if (key === "eng") {
-          //   console.log("ENG TALÁLAT");
           newDish["en"] = value;
         } else {
           newDish[key] = value;
@@ -59,12 +66,13 @@ menu.forEach((category) => {
     }
 
     dishes.push(newDish);
+    idCounter++;
   });
 
   categories.push({ title: title, dishes: dishes });
 });
 
 fs.writeFileSync(
-  "new_datastructure_menu_2026_summer.json",
+  "new_datastructure_menu_with_UIDs_2026_summer.json",
   JSON.stringify(newMenu, null, 2),
 );
