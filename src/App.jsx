@@ -25,7 +25,7 @@ function App() {
 
   // Testing getLanguageMenu modul
   const transformedMenu = getLanguageMenu(selectedLanguage);
-
+  console.log(transformedMenu);
   //
   return (
     <div className="App" ref={appRef}>

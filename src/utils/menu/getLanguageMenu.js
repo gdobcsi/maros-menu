@@ -1,25 +1,32 @@
-import menu from "../../menu_2026_summer.json";
+import newStrukturedData from "../../new_datastructure_menu_with_UIDs_2026_summer.json";
+
+const menu = newStrukturedData[0];
+const categories = menu.categories;
 
 const getLanguageMenu = (language) => {
   if (language !== null) {
-    let transformedMenu = menu.map((sections) => {
-      // titles of categories
-      let foundTitle = sections.category.find((title) => language in title);
-      // category items
-      let foundDishes = sections.items.map((dish) => {
-        let dishName = dish[language];
-        let dishPrice = dish.price;
-        let dishCurrency = dish.currency.find(
-          (currencyMatch) => language in currencyMatch,
-        );
+    const currency = menu.currency[language];
+    let transformedMenu = categories.map((category) => {
+      let title;
+      for (const [titleLanguage, titleText] of Object.entries(category.title)) {
+        if (language === titleLanguage) {
+          title = titleText;
+        }
+      }
 
-        return {
-          name: dishName,
-          price: dishPrice,
-          currency: dishCurrency[language],
+      let dishes = [];
+      category.dishes.forEach((dish) => {
+        const currentDish = {
+          name: dish[language],
+          uid: dish.uid,
+          price: dish.price,
+          currency,
         };
+
+        dishes.push(currentDish);
       });
-      return { category: foundTitle[language], items: foundDishes };
+
+      return { title, dishes };
     });
     return transformedMenu;
   }

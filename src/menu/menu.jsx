@@ -15,11 +15,11 @@ const Menu = ({ menu }) => {
   return (
     <div className="show-menu-wrapper">
       <div id="show-menu" ref={menuRef}>
-        {menu.map((section, index) => (
+        {menu.map((category, index) => (
           <div key={index} className="category">
-            <h2 className="category-title">{section.category}</h2>
+            <h2 className="category-title">{category.title}</h2>
             <div>
-              {section.items.map((dish, index) => (
+              {category.dishes.map((dish, index) => (
                 <div key={index}>
                   <div className="dish">{dish.name}</div>
                   <div className="price">
