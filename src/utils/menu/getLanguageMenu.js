@@ -1,6 +1,6 @@
-import newStrukturedData from "../../new_datastructure_menu_with_UIDs_2026_summer.json";
+import currentMenu from "../../data/menu/current/menu.json";
 
-const menu = newStrukturedData[0];
+const menu = currentMenu[0];
 const categories = menu.categories;
 
 const getLanguageMenu = (language) => {
