@@ -1,14 +1,14 @@
 import "./languageSelector.css";
 
-import LanguagesSetup from "../languages.json";
+import languages from "../data/languages.json";
 
 const LanguageSelector = ({ setLanguage }) => {
   return (
     <div className="language-picker">
-      {LanguagesSetup.map((language, index) => (
+      {languages.map((language) => (
         <div
-          key={index}
-          onClick={() => setLanguage(language.language)}
+          key={language.uid}
+          onClick={() => setLanguage(language.languageCode)}
           className="menu-button"
         >
           <div className="flag-box">
