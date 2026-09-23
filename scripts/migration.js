@@ -2,7 +2,9 @@ const getUID = require("./uidGenerator");
 
 const fs = require("fs");
 
-const rawdata = fs.readFileSync("../src/menu_2026_summer.json");
+const rawdata = fs.readFileSync(
+  "../src/data/menu/archive/migrated/2026_summer/source.json",
+);
 const menu = JSON.parse(rawdata);
 
 const newMenu = [
@@ -34,8 +36,6 @@ menu.forEach((category) => {
 
   const dishes = [];
   const sourceDishes = category.items;
-
-  console.log();
 
   sourceDishes.forEach((dish) => {
     const newDish = {};
@@ -73,6 +73,6 @@ menu.forEach((category) => {
 });
 
 fs.writeFileSync(
-  "new_datastructure_menu_with_UIDs_2026_summer.json",
+  "./outputs/new_datastructure_menu_with_UIDs_2026_summer.json",
   JSON.stringify(newMenu, null, 2),
 );
