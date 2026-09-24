@@ -26,7 +26,7 @@ const getLanguageMenu = (language) => {
         dishes.push(currentDish);
       });
 
-      return { title, dishes };
+      return { uid: category.uid, title, dishes };
     });
     return transformedMenu;
   }
