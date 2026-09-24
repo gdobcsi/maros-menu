@@ -1,4 +1,4 @@
-const getUID = require("./uidGenerator");
+const { getUID, createPrefix } = require("./uidGenerator");
 
 const fs = require("fs");
 
@@ -14,7 +14,8 @@ const newMenu = [
   },
 ];
 
-let idCounter = 1;
+let categoryCounter = 1;
+let dishCounter = 1;
 
 const categories = newMenu[0].categories;
 
@@ -39,7 +40,8 @@ menu.forEach((category) => {
 
   sourceDishes.forEach((dish) => {
     const newDish = {};
-    newDish.uid = getUID(titleForUID, idCounter);
+    const dishPrefix = createPrefix(titleForUID, "dish");
+    newDish.uid = getUID(dishPrefix, dishCounter);
     for (const [key, value] of Object.entries(dish)) {
       if (key === "currency") {
         if (newMenu[0].currency === null) {
@@ -66,10 +68,13 @@ menu.forEach((category) => {
     }
 
     dishes.push(newDish);
-    idCounter++;
+    dishCounter++;
   });
 
-  categories.push({ title: title, dishes: dishes });
+  const categoryPrefix = createPrefix(titleForUID, "category");
+  const uid = getUID(categoryPrefix, categoryCounter);
+  categories.push({ uid, title: title, dishes: dishes });
+  categoryCounter++;
 });
 
 fs.writeFileSync(

@@ -5,6 +5,15 @@ const categoryPrefix = (string) => {
   return normalized;
 };
 
+const createPrefix = (string, type) => {
+  const sliced = string.slice(0, 4);
+  const normalized = sliced.normalize("NFD").replace(/\p{M}/gu, "");
+
+  return type === "dish"
+    ? normalized.toLowerCase()
+    : "CAT-" + normalized.toUpperCase();
+};
+
 const createSerial = (number) => {
   if (number < 1 || number > 9999) {
     throw new Error("Serial digits must be between 1 and 9999!");
@@ -19,9 +28,11 @@ const createSerial = (number) => {
   return serial;
 };
 
-const getUID = (title, counter) => {
-  const UID = categoryPrefix(title) + createSerial(counter);
-  return UID;
+const getUID = (prefix, counter) => {
+  return prefix + createSerial(counter);
 };
 
-module.exports = getUID;
+module.exports = {
+  getUID,
+  createPrefix,
+};

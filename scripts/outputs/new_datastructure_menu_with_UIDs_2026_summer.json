@@ -7,6 +7,7 @@
     },
     "categories": [
       {
+        "uid": "CAT-SOUP0001",
         "title": {
           "hu": "Levesek",
           "en": "Soups",
@@ -51,6 +52,7 @@
         ]
       },
       {
+        "uid": "CAT-MAIN0002",
         "title": {
           "hu": "Főételek",
           "en": "Main Courses",
@@ -200,6 +202,7 @@
         ]
       },
       {
+        "uid": "CAT-FISH0003",
         "title": {
           "hu": "Halételek",
           "en": "Fish Courses",
@@ -286,6 +289,7 @@
         ]
       },
       {
+        "uid": "CAT-SIDE0004",
         "title": {
           "hu": "Saláták",
           "en": "Side Salads",
@@ -330,6 +334,7 @@
         ]
       },
       {
+        "uid": "CAT-DESS0005",
         "title": {
           "hu": "Desszertek",
           "en": "Desserts",
