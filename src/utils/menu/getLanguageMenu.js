@@ -6,24 +6,16 @@ const categories = menu.categories;
 const getLanguageMenu = (language) => {
   if (language !== null) {
     const currency = menu.currency[language];
-    let transformedMenu = categories.map((category) => {
-      let title;
-      for (const [titleLanguage, titleText] of Object.entries(category.title)) {
-        if (language === titleLanguage) {
-          title = titleText;
-        }
-      }
+    const transformedMenu = categories.map((category) => {
+      const title = category.title[language];
 
-      let dishes = [];
-      category.dishes.forEach((dish) => {
-        const currentDish = {
-          name: dish[language],
+      const dishes = category.dishes.map((dish) => {
+        return {
           uid: dish.uid,
+          name: dish[language],
           price: dish.price,
           currency,
         };
-
-        dishes.push(currentDish);
       });
 
       return { uid: category.uid, title, dishes };
