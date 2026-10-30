@@ -1,6 +1,6 @@
-import "./header.css";
+import "./Header.css";
 
-import logo from "../components/micro&macro/logo/maros_logo_web2.svg";
+import logo from "../../assets/maros_logo_web2.svg";
 
 const Header = () => {
   return (

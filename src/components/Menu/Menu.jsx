@@ -1,17 +1,6 @@
-import "./menu.css";
+import "./Menu.css";
 
-import { useEffect, useRef } from "react";
-
-const Menu = ({ menu }) => {
-  const menuRef = useRef();
-
-  useEffect(() => {
-    menuRef.current.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }, [menu]);
-
+const Menu = ({ menu, menuRef }) => {
   return (
     <div className="show-menu-wrapper">
       <div id="show-menu" ref={menuRef}>

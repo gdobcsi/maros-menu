@@ -1,0 +1,59 @@
+{
+  "name": "Maros Étterem",
+  "phone": "+36 27 354 576",
+  "address": {
+    "postCode": "2626",
+    "city": "Nagymaros",
+    "street": "MAHART Hajóállomás"
+  },
+  "socialMedia": {
+    "fb": "https://www.facebook.com/marosface/?locale=hu_HU"
+  },
+  "openingTimes": {
+    "title": "Nyitvatartás",
+    "days": [
+      {
+        "day": "Hétfő",
+        "from": "12:00",
+        "to": "19:00",
+        "isClosed": true
+      },
+      {
+        "day": "Kedd",
+        "from": "12:00",
+        "to": "19:00",
+        "isClosed": true
+      },
+      {
+        "day": "Szerda",
+        "from": "12:00",
+        "to": "19:00",
+        "isClosed": true
+      },
+      {
+        "day": "Csütörtök",
+        "from": "12:00",
+        "to": "19:00",
+        "isClosed": false
+      },
+      {
+        "day": "Péntek",
+        "from": "12:00",
+        "to": "21:00",
+        "isClosed": false
+      },
+      {
+        "day": "Szombat",
+        "from": "12:00",
+        "to": "21:00",
+        "isClosed": false
+      },
+      {
+        "day": "Vasárnap",
+        "from": "12:00",
+        "to": "21:00",
+        "isClosed": false
+      }
+    ]
+  }
+}

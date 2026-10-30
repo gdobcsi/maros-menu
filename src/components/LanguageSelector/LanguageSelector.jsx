@@ -1,14 +1,16 @@
-import "./languageSelector.css";
+import "./LanguageSelector.css";
 
-import languages from "../data/languages.json";
-
-const LanguageSelector = ({ setLanguage }) => {
+const LanguageSelector = ({ languages, setLanguage, setScrollTrigger }) => {
   return (
     <div className="language-picker">
       {languages.map((language) => (
-        <div
+        <button
+          type="button"
           key={language.uid}
-          onClick={() => setLanguage(language.languageCode)}
+          onClick={() => {
+            setLanguage(language.languageCode);
+            setScrollTrigger((prev) => prev + 1);
+          }}
           className="menu-button"
         >
           <div className="flag-box">
@@ -26,7 +28,7 @@ const LanguageSelector = ({ setLanguage }) => {
           <span>
             <i>{language.year}</i>
           </span>
-        </div>
+        </button>
       ))}
     </div>
   );
