@@ -1,19 +1,9 @@
 :root {
-  /* Text */
-  --main-text-color: #d7814b;
-  --main-text-light: #f8a571;
-  --main-text-dark: #241403;
+  /* Background surfaces */
+  --main-bg-surface: #242222;
+  --footer-bg-surface: #181818;
+  --surface-highlight: #1a171796;
 
-  /* BG */
-  --main-dark-color: #372c2e;
-  --main-bg-color-dark: #402404;
-  --main-bg-color-main: #2f2b2b;
-  --main-bg-color-main: #242222;
-  /* --main-bg-color-darker-grey: #211f1f; */
-  --main-bg-color-darker-grey: #1a1717;
-  --main-bg-color-darker-grey: #1a171796;
-  --main-bg-color-darker-grey-2: #181818;
-
-  /* Heights */
-  --navbar-height: 3rem;
+  /* Text & Accent */
+  --main-accent-color: #d7814b;
 }

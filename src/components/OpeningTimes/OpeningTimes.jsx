@@ -13,7 +13,7 @@ const OpeningTimes = ({ openingTimes }) => {
         <div className="opening-text">
           {openingTimes.days.map((day) => {
             return (
-              <div key={day.day} className="day-group">
+              <div key={day.day}>
                 <div className="day">{day.day}:</div>
                 <div className="bottom-space">
                   {day.isClosed ? (

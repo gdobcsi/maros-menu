@@ -1,0 +1,15 @@
+/* Tablet 576px*/
+@media screen and (min-width: 36rem) {
+  .language-picker {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+/* Desktop 992px */
+@media screen and (min-width: 62rem) {
+}
+
+/* Large desktop 1200px */
+@media screen and (min-width: 75rem) {
+}

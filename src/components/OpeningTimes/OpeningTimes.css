@@ -18,11 +18,3 @@ h2.opening-header {
 .day {
   font-weight: 400;
 }
-
-.day-group {
-  /* outline: 1px solid red; */
-}
-
-.day-group:last-child {
-  /* margin-top: 0.5rem; */
-}

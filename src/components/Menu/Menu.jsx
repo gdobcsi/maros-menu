@@ -2,8 +2,8 @@ import "./Menu.css";
 
 const Menu = ({ menu, menuRef }) => {
   return (
-    <div className="show-menu-wrapper">
-      <div id="show-menu" ref={menuRef}>
+    <div>
+      <div ref={menuRef}>
         {menu.map((category) => (
           <div key={category.uid} className="category">
             <h2 className="category-title">{category.title}</h2>

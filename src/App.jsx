@@ -2,10 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 import "./css/variables.css";
 import "./css/App.css";
-import "./css/_common-classes.css";
-import "./css/res-tablet.css";
-import "./css/res-small-screens.css";
-import "./css/res-large-screens.css";
+import "./css/responsive.css";
 
 import restaurantData from "./data/restaurant.json";
 import languages from "./data/languages.json";
@@ -36,7 +33,7 @@ function App() {
   const transformedMenu = getLanguageMenu(selectedLanguage);
 
   return (
-    <div className="App" ref={appRef}>
+    <div ref={appRef}>
       <div className="App-inner-wrapper">
         <Header />
         <PhoneAndOpeningTime restaurantData={restaurantData} />

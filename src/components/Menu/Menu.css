@@ -1,33 +1,11 @@
-.show-menu-wrapper {
-  /* margin-bottom: 8rem; */
-}
-
-#show-menu {
-  min-height: 100vh;
-
-  margin: 0rem 1rem;
-  padding: 0 0.5rem 1rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
-  font-size: 1.4rem;
-
-  text-align: center;
-}
-
 .category {
   width: 100%;
 
-  margin: 1rem 1rem;
-
-  /* background-color: pink; */
+  margin: 1rem 0rem;
 }
+
 .category-title {
   position: relative;
-  /* margin-top: 1.2rem; */
   margin-bottom: 1.5rem;
   font-size: 2.5rem;
   letter-spacing: 6px;
@@ -36,7 +14,6 @@
 .dish {
   margin-top: 2rem;
   margin-bottom: 0.3rem;
-  /* background-color: #fff; */
 }
 .price {
   margin-top: 0.8rem;
@@ -50,12 +27,4 @@
   margin: 0.5rem auto;
 
   background-color: #b7612c;
-}
-
-.coming-soon {
-  min-height: 100vh;
-  background-color: #fff;
-}
-.dish-allergies{
-  font-size: 0.9rem;
 }

@@ -15,19 +15,5 @@
 
   border: 2px solid #b7612c;
   border-radius: 50%;
-  background-color: transparent;
   background-color: #242222;
-
-  /* outline: 2px solid red; */
-}
-
-.swing-from-right {
-  position: absolute;
-  transform: translateX(-150px);
-  transition: 1s all ease;
-  opacity: 0;
-}
-.swing-from-right.active {
-  transform: translateY(0);
-  opacity: 1;
 }
