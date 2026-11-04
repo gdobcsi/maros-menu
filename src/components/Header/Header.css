@@ -1,5 +1,5 @@
 .header {
-  margin: 3rem 1rem 1rem;
+  margin: 3rem var(--spacing-md);
 }
 
 .header-logo {

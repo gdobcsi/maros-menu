@@ -1,30 +1,31 @@
 .category {
   width: 100%;
 
-  margin: 1rem 0rem;
+  margin: var(--spacing-md) 0;
 }
 
 .category-title {
   position: relative;
-  margin-bottom: 1.5rem;
-  font-size: 2.5rem;
+  margin-bottom: var(--spacing-lg);
+
+  font-size: var(--font-size-display);
   letter-spacing: 6px;
 }
 
 .dish {
-  margin-top: 2rem;
-  margin-bottom: 0.3rem;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-xs);
 }
 .price {
-  margin-top: 0.8rem;
-  font-weight: 300;
+  margin-top: var(--spacing-sm);
+  font-weight: var(--font-weight-light);
 }
 
 .divider-line {
   width: 35%;
   height: 1px;
 
-  margin: 0.5rem auto;
+  margin: var(--spacing-sm) auto;
 
-  background-color: #b7612c;
+  background-color: var(--main-accent-color);
 }

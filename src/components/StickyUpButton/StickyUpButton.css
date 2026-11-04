@@ -13,7 +13,7 @@
 
   cursor: pointer;
 
-  border: 2px solid #b7612c;
+  border: 2px solid var(--accent-dark-color);
   border-radius: 50%;
-  background-color: #242222;
+  background-color: var(--main-bg-surface);
 }

@@ -1,20 +1,20 @@
 h2.opening-header {
-  margin-bottom: 0rem;
+  margin-bottom: 0;
 
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 .opening-text {
-  margin-top: 0.5rem;
+  margin-top: var(--spacing-sm);
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  font-weight: 200;
+  font-weight: var(--font-weight-extralight);
 }
 
 .day {
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
 }

@@ -1,5 +1,5 @@
 .phone-and-opening-wrapper {
-  margin: 0 1rem;
+  margin: 0 var(--spacing-md);
 
   display: grid;
   place-items: center;
@@ -8,14 +8,14 @@
 .phone-and-opening {
   width: fit-content;
 
-  margin: 0rem auto;
+  margin: 0 auto;
 
-  padding: 0.25rem 2rem 0rem;
+  padding: var(--spacing-xs) var(--spacing-xl) 0;
 
   color: var(--main-accent-color);
   background-color: var(--surface-highlight);
 
-  border-radius: 10px;
+  border-radius: var(--border-radius-md);
 }
 
 .phone-box,
@@ -27,35 +27,38 @@
 .phone-number {
   flex: 1;
 }
-.phone {
-  margin: 0.5rem 0;
-  width: 220px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-}
+.phone,
 .opening-time {
   width: 220px;
+}
+
+.phone {
+  margin: var(--spacing-sm) 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: var(--font-size-lg);
 }
-.phone-box > svg {
-  width: 30px;
-  height: 40px;
+.opening-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-md);
 }
-.phone-box > svg > g {
-  fill: #b7612c;
-}
-
+.phone-box > svg,
 .opening-time-box > svg {
   width: 30px;
   height: 40px;
-  fill: #b7612c;
+}
+
+.phone-box > svg > g {
+  fill: var(--accent-dark-color);
+}
+
+.opening-time-box > svg {
+  fill: var(--accent-dark-color);
 }
 
 .bottom-space {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
 }
