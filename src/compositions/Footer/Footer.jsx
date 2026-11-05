@@ -1,13 +1,13 @@
 import "./Footer.css";
 
-const Footer = ({ restaurantData }) => {
+const Footer = ({ facebookUrl, phone }) => {
   return (
     <div className="footer">
       <div className="footer-line">
         <div className="footer-fb">
-          <a href={restaurantData.socialMedia.fb}>Facebook</a>
+          <a href={facebookUrl}>Facebook</a>
         </div>
-        <div className="footer-phone">{restaurantData.phone}</div>
+        <div className="footer-phone">{phone}</div>
       </div>
       <div className="footer-text">Maros Étterem ©2026</div>
     </div>

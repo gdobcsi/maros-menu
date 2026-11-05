@@ -36,7 +36,10 @@ function App() {
     <div ref={appRef}>
       <div className="App-inner-wrapper">
         <Header />
-        <PhoneAndOpeningTime restaurantData={restaurantData} />
+        <PhoneAndOpeningTime
+          phone={restaurantData.phone}
+          openingTimes={restaurantData.openingTimes}
+        />
         <LanguageSelector
           languages={languages}
           setLanguage={setSelectedLanguage}
@@ -44,7 +47,10 @@ function App() {
         />
         <StickyUpButton appRef={appRef} />
         {selectedLanguage && <Menu menu={transformedMenu} menuRef={menuRef} />}
-        <Footer restaurantData={restaurantData} />
+        <Footer
+          facebookUrl={restaurantData.socialMedia.fb}
+          phone={restaurantData.phone}
+        />
       </div>
     </div>
   );
