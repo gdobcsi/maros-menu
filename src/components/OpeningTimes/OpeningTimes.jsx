@@ -11,9 +11,14 @@ const OpeningTimes = ({ openingTimes }) => {
           <ClockIcon />
         </div>
         <div className="opening-text">
-          {openingTimes.days.map((day) => {
+          {openingTimes.days.map((day, index) => {
             return (
-              <div key={day.day}>
+              <div
+                key={day.day}
+                className={
+                  index === 6 ? "opening-day opening-day-sunday" : "opening-day"
+                }
+              >
                 <div className="day">{day.day}:</div>
                 <div className="bottom-space">
                   {day.isClosed ? (

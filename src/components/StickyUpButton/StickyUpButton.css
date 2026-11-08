@@ -5,8 +5,8 @@
   position: fixed;
   z-index: 1000;
 
-  top: 85vh;
-  left: 85vw;
+  bottom: 7rem;
+  right: var(--spacing-sm);
 
   display: grid;
   place-items: center;

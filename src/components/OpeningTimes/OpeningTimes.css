@@ -1,7 +1,9 @@
 h2.opening-header {
-  margin-bottom: 0;
+  margin-bottom: var(--spacing-sm);
 
+  font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-heading);
 }
 
 .opening-text {
@@ -12,6 +14,8 @@ h2.opening-header {
   justify-content: center;
   align-items: center;
 
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
   font-weight: var(--font-weight-extralight);
 }
 

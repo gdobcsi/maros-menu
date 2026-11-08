@@ -2,7 +2,7 @@ import "./LanguageSelector.css";
 
 const LanguageSelector = ({ languages, setLanguage, setScrollTrigger }) => {
   return (
-    <div className="language-picker">
+    <div className="language-selector">
       {languages.map((language) => (
         <button
           type="button"
@@ -11,7 +11,7 @@ const LanguageSelector = ({ languages, setLanguage, setScrollTrigger }) => {
             setLanguage(language.languageCode);
             setScrollTrigger((prev) => prev + 1);
           }}
-          className="menu-button"
+          className="language-button"
         >
           <div className="flag-box">
             <div
@@ -22,7 +22,7 @@ const LanguageSelector = ({ languages, setLanguage, setScrollTrigger }) => {
               }}
             ></div>
           </div>
-          <div className="darker-bg">
+          <div className="language-info">
             <p>{language.title}</p>
           </div>
           <span>

@@ -1,15 +1,83 @@
-/* Tablet 576px*/
+/* Mobile < 576px */
+@media screen and (max-width: 35.999rem) {
+  .language-selector .language-button {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+  }
+
+  .language-info > p {
+    margin: 0;
+  }
+
+  .flag-box {
+    margin-left: var(--spacing-xxl);
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  .language-info {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .language-button > span {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .opening-time {
+    display: flex;
+    width: 220px;
+  }
+
+  .phone-and-opening .opening-time .opening-time-box {
+    display: none;
+  }
+
+  .phone-and-opening .opening-time .opening-text {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, auto) auto;
+    grid-auto-flow: column;
+    justify-items: stretch;
+    align-items: start;
+    width: 100%;
+  }
+
+  .opening-day {
+    text-align: center;
+  }
+
+  .phone-and-opening .opening-time .opening-day-sunday {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+}
+
+/* Tablet >= 576px*/
 @media screen and (min-width: 36rem) {
-  .language-picker {
+  .App-content {
+    max-width: 36rem;
+  }
+
+  .language-selector {
     width: 100%;
     max-width: 600px;
   }
 }
 
-/* Desktop 992px */
+/* Desktop >= 992px */
 @media screen and (min-width: 62rem) {
+  .App-content {
+    max-width: 62rem;
+  }
 }
 
-/* Large desktop 1200px */
+/* Large desktop >= 1200px */
 @media screen and (min-width: 75rem) {
+  .App-content {
+    max-width: 75rem;
+  }
 }

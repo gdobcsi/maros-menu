@@ -34,19 +34,26 @@ function App() {
 
   return (
     <div ref={appRef}>
-      <div className="App-inner-wrapper">
-        <Header />
-        <PhoneAndOpeningTime
-          phone={restaurantData.phone}
-          openingTimes={restaurantData.openingTimes}
-        />
-        <LanguageSelector
-          languages={languages}
-          setLanguage={setSelectedLanguage}
-          setScrollTrigger={setScrollTrigger}
-        />
-        <StickyUpButton appRef={appRef} />
-        {selectedLanguage && <Menu menu={transformedMenu} menuRef={menuRef} />}
+      <div className="App-wrapper">
+        <div className="App-content">
+          <Header />
+          <div className="top-controls">
+            <PhoneAndOpeningTime
+              phone={restaurantData.phone}
+              openingTimes={restaurantData.openingTimes}
+            />
+            <LanguageSelector
+              languages={languages}
+              setLanguage={setSelectedLanguage}
+              setScrollTrigger={setScrollTrigger}
+            />
+          </div>
+          <StickyUpButton appRef={appRef} />
+          {selectedLanguage && (
+            <Menu menu={transformedMenu} menuRef={menuRef} />
+          )}
+        </div>
+
         <Footer
           facebookUrl={restaurantData.socialMedia.fb}
           phone={restaurantData.phone}
