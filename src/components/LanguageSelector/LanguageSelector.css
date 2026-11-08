@@ -57,3 +57,23 @@
   border-radius: 50%;
   border: 1px solid var(--main-accent-color);
 }
+
+.language-button {
+  position: relative;
+}
+
+.language-button.is-active {
+  background-color: #2c231e;
+  border: 2px solid var(--main-accent-color);
+  box-shadow: none;
+}
+
+.language-button.is-active::after {
+  content: "✓";
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: var(--main-accent-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
