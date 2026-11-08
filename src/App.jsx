@@ -61,6 +61,9 @@ function App() {
         <Footer
           facebookUrl={restaurantData.socialMedia.fb}
           phone={restaurantData.phone}
+          address={restaurantData.address}
+          openingTimes={restaurantData.openingTimes}
+          googleMapsUrl={restaurantData.googleMaps.embedUrl}
         />
       </div>
     </div>
