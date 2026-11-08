@@ -1,17 +1,25 @@
 import "./LanguageSelector.css";
 
-const LanguageSelector = ({ languages, setLanguage, setScrollTrigger }) => {
+const LanguageSelector = ({
+  languages,
+  selectedLanguage,
+  setLanguage,
+  setScrollTrigger,
+}) => {
   return (
     <div className="language-selector">
       {languages.map((language) => (
         <button
           type="button"
+          aria-pressed={language.languageCode === selectedLanguage}
           key={language.uid}
           onClick={() => {
             setLanguage(language.languageCode);
             setScrollTrigger((prev) => prev + 1);
           }}
-          className="language-button"
+          className={`language-button ${
+            language.languageCode === selectedLanguage ? "is-active" : ""
+          }`}
         >
           <div className="flag-box">
             <div

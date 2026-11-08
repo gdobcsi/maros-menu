@@ -44,6 +44,7 @@ function App() {
             />
             <LanguageSelector
               languages={languages}
+              selectedLanguage={selectedLanguage}
               setLanguage={setSelectedLanguage}
               setScrollTrigger={setScrollTrigger}
             />
