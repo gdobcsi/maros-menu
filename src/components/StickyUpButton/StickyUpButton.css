@@ -16,4 +16,28 @@
   border: 2px solid var(--accent-dark-color);
   border-radius: 50%;
   background-color: var(--main-bg-surface);
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sticky-up-button {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.sticky-up-button:hover {
+  background-color: #30251f;
+  border-color: var(--main-accent-color);
+  transform: translateY(-2px);
+}
+
+.sticky-up-button:active {
+  transform: translateY(0) scale(0.96);
+}
+
+.sticky-up-button:focus-visible {
+  outline: 2px solid var(--main-accent-color);
+  outline-offset: 3px;
 }
