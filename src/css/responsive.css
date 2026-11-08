@@ -62,9 +62,23 @@
     max-width: 36rem;
   }
 
-  .language-selector {
+  .App-content .top-controls {
+    width: 70%;
+  }
+
+  .App-content .language-selector {
     width: 100%;
     max-width: 600px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+
+  .App-content .language-button {
+    width: calc(50% - var(--spacing-md) / 2);
   }
 }
 
@@ -72,6 +86,24 @@
 @media screen and (min-width: 62rem) {
   .App-content {
     max-width: 62rem;
+  }
+
+  .App-content .top-controls {
+    width: 65%;
+  }
+
+  .App-content .language-selector {
+    max-width: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+  }
+
+  .App-content .language-button {
+    width: calc((100% - 2 * var(--spacing-md)) / 3);
   }
 }
 
