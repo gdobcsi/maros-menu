@@ -17,6 +17,7 @@ import getLanguageMenu from "./utils/menu/getLanguageMenu";
 
 function App() {
   const appRef = useRef(null);
+  const contentRef = useRef(null);
   const menuRef = useRef(null);
 
   const [selectedLanguage, setSelectedLanguage] = useState(null);
@@ -35,7 +36,7 @@ function App() {
   return (
     <div ref={appRef}>
       <div className="App-wrapper">
-        <div className="App-content">
+        <div className="App-content" ref={contentRef}>
           <Header />
           <div className="top-controls">
             <PhoneAndOpeningTime
@@ -52,7 +53,9 @@ function App() {
           {selectedLanguage && (
             <Menu menu={transformedMenu} menuRef={menuRef} />
           )}
-          {selectedLanguage && <StickyUpButton appRef={appRef} />}
+          {selectedLanguage && (
+            <StickyUpButton appRef={appRef} contentRef={contentRef} />
+          )}
         </div>
 
         <Footer
