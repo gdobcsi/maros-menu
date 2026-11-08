@@ -77,3 +77,29 @@
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+.language-button {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) {
+  .language-button:hover {
+    background-color: #30251f;
+    border-color: var(--main-accent-color);
+    transform: translateY(-2px);
+  }
+}
+
+.language-button:active {
+  background-color: #30251f;
+  transform: scale(0.98);
+}
+
+.language-button:focus-visible {
+  outline: 2px solid var(--main-accent-color);
+  outline-offset: 3px;
+}
