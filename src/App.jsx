@@ -49,10 +49,10 @@ function App() {
               setScrollTrigger={setScrollTrigger}
             />
           </div>
-          <StickyUpButton appRef={appRef} />
           {selectedLanguage && (
             <Menu menu={transformedMenu} menuRef={menuRef} />
           )}
+          {selectedLanguage && <StickyUpButton appRef={appRef} />}
         </div>
 
         <Footer
