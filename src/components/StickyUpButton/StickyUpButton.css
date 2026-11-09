@@ -22,9 +22,10 @@
 
 .sticky-up-button {
   transition:
+    top 400ms ease-in-out,
+    transform 180ms ease,
     background-color 180ms ease,
-    border-color 180ms ease,
-    transform 180ms ease;
+    border-color 180ms ease;
 }
 
 .sticky-up-button:hover {

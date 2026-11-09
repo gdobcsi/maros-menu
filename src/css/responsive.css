@@ -54,6 +54,24 @@
     grid-column: 1 / -1;
     grid-row: 4;
   }
+
+  .sticky-up-button {
+    top: calc(100dvh - 8.5rem);
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+
+  .sticky-up-button.is-footer-visible {
+    top: 40%;
+  }
+
+  .sticky-up-button:hover {
+    transform: translateY(-50%) translateY(-2px);
+  }
+
+  .sticky-up-button:active {
+    transform: translateY(-50%) scale(0.96);
+  }
 }
 
 /* Tablet >= 576px*/

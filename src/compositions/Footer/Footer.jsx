@@ -1,6 +1,7 @@
 import "./Footer.css";
 
 const Footer = ({
+  footerRef,
   facebookUrl,
   phone,
   address,
@@ -8,7 +9,7 @@ const Footer = ({
   googleMapsUrl,
 }) => {
   return (
-    <div className="footer">
+    <div className="footer" ref={footerRef}>
       <div className="footer-main">
         {/* Contact */}
         <section className="footer-contact">

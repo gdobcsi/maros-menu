@@ -3,8 +3,9 @@ import { useEffect, useState } from "react";
 import "./StickyUpButton.css";
 import StickyUpButtonIcon from "./StickyUpButtonIcon";
 
-const StickyUpButton = ({ appRef, contentRef }) => {
+const StickyUpButton = ({ appRef, contentRef, footerRef }) => {
   const [rightOffset, setRightOffset] = useState(8);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
 
   useEffect(() => {
     const updatePosition = () => {
@@ -24,6 +25,18 @@ const StickyUpButton = ({ appRef, contentRef }) => {
     };
   }, [contentRef]);
 
+  useEffect(() => {
+    if (!footerRef.current) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsFooterVisible(entry.isIntersecting);
+    });
+
+    observer.observe(footerRef.current);
+
+    return () => observer.disconnect();
+  }, [footerRef]);
+
   const onClickHandler = () => {
     appRef.current.scrollIntoView({
       behavior: "smooth",
@@ -33,7 +46,7 @@ const StickyUpButton = ({ appRef, contentRef }) => {
 
   return (
     <button
-      className="sticky-up-button"
+      className={`sticky-up-button ${isFooterVisible ? "is-footer-visible" : ""}`}
       style={{ right: `${rightOffset}px` }}
       onClick={onClickHandler}
     >

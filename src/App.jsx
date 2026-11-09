@@ -19,6 +19,7 @@ function App() {
   const appRef = useRef(null);
   const contentRef = useRef(null);
   const menuRef = useRef(null);
+  const footerRef = useRef(null);
 
   const [selectedLanguage, setSelectedLanguage] = useState(null);
   const [scrollTrigger, setScrollTrigger] = useState(0);
@@ -54,11 +55,16 @@ function App() {
             <Menu menu={transformedMenu} menuRef={menuRef} />
           )}
           {selectedLanguage && (
-            <StickyUpButton appRef={appRef} contentRef={contentRef} />
+            <StickyUpButton
+              appRef={appRef}
+              contentRef={contentRef}
+              footerRef={footerRef}
+            />
           )}
         </div>
 
         <Footer
+          footerRef={footerRef}
           facebookUrl={restaurantData.socialMedia.fb}
           phone={restaurantData.phone}
           address={restaurantData.address}
