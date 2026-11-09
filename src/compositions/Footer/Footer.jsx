@@ -15,17 +15,56 @@ const Footer = ({
         <section className="footer-contact">
           <h3>Kapcsolat</h3>
 
-          <a href={`tel:${phone}`} className="footer-phone">
-            {phone}
+          <a href={`tel:${phone}`} className="footer-contact-button">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2
+        19.79 19.79 0 0 1-8.63-3.07
+        19.5 19.5 0 0 1-6-6
+        19.79 19.79 0 0 1-3.07-8.67
+        A2 2 0 0 1 4.11 2h3
+        a2 2 0 0 1 2 1.72
+        c.12.96.36 1.9.72 2.8
+        a2 2 0 0 1-.45 2.11L8.11 9.91
+        a16 16 0 0 0 6 6l1.27-1.27
+        a2 2 0 0 1 2.11-.45
+        c.9.36 1.84.6 2.8.72
+        A2 2 0 0 1 22 16.92Z"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+
+            <span>{phone}</span>
           </a>
 
           <a
             href={facebookUrl}
-            className="footer-facebook"
+            className="footer-contact-button"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Facebook
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.019 4.388 11.02 10.125 11.927v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.975h-1.514c-1.49 0-1.955.93-1.955 1.885v2.261h3.328l-.532 3.49h-2.796V24C19.612 23.093 24 18.092 24 12.073Z" />
+            </svg>
+
+            <span>Facebook</span>
           </a>
         </section>
 

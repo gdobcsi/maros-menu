@@ -110,7 +110,10 @@
 
 .footer-directions {
   margin-top: var(--spacing-md);
+}
 
+.footer-directions,
+.footer-contact-button {
   display: inline-grid;
   grid-template-columns: auto 1fr;
   align-items: center;
@@ -139,6 +142,11 @@
   gap: 2px;
 }
 
+.footer-contact-button span {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+}
+
 .footer-directions-text span:first-child {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-regular);
@@ -150,18 +158,21 @@
 }
 
 @media (hover: hover) {
-  .footer-directions:hover {
+  .footer-directions:hover,
+  .footer-contact-button:hover {
     background-color: #30251f;
     border-color: var(--main-accent-color);
     transform: translateY(-2px);
   }
 }
 
-.footer-directions:active {
+.footer-directions:active,
+.footer-contact-button:active {
   transform: scale(0.98);
 }
 
-.footer-directions:focus-visible {
+.footer-directions:focus-visible,
+.footer-contact-button:focus-visible {
   outline: 2px solid var(--main-accent-color);
   outline-offset: 3px;
 }
