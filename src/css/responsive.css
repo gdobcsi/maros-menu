@@ -144,6 +144,21 @@
   .App-content .language-button {
     width: calc((100% - 2 * var(--spacing-md)) / 3);
   }
+
+  /* Footer desktop layout */
+  .footer .footer-main {
+    padding-inline: 0;
+  }
+
+  .footer .footer-map iframe {
+    height: 250px;
+  }
+
+  .footer .footer-main .footer-map {
+    width: 100%;
+    max-width: 62rem;
+    margin-inline: auto;
+  }
 }
 
 /* Large desktop >= 1200px */
