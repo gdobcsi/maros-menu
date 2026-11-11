@@ -13,7 +13,8 @@ const StickyUpButton = ({ appRef, contentRef, footerRef }) => {
 
       const rect = contentRef.current.getBoundingClientRect();
 
-      setRightOffset(window.innerWidth - rect.right + 8);
+      const offset = window.innerWidth < 576 ? 3 : 8;
+      setRightOffset(window.innerWidth - rect.right + offset);
     };
 
     updatePosition();
