@@ -47,9 +47,11 @@ const StickyUpButton = ({ appRef, contentRef, footerRef }) => {
 
   return (
     <button
+      type="button"
       className={`sticky-up-button ${isFooterVisible ? "is-footer-visible" : ""}`}
       style={{ right: `${rightOffset}px` }}
       onClick={onClickHandler}
+      aria-label="Scroll to top"
     >
       <StickyUpButtonIcon />
     </button>
