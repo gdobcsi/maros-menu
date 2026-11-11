@@ -21,3 +21,7 @@
   background-color: var(--surface-highlight);
   border-radius: var(--border-radius-md);
 }
+
+.phone-and-opening .phone-button {
+  margin-block: var(--spacing-sm);
+}

@@ -12,6 +12,7 @@
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-tight);
   letter-spacing: 0.12em;
+  text-align: center;
 }
 
 .dish {
