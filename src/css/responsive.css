@@ -13,7 +13,7 @@
   }
 
   .App-wrapper .footer {
-    padding-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-md);
   }
 
   .language-selector .language-button {
@@ -76,6 +76,18 @@
     flex-direction: column;
     gap: var(--spacing-xl);
   }
+
+  .footer .footer-bottom {
+    gap: 0;
+  }
+
+  .footer .footer-bottom .footer-credit {
+    width: 50%;
+    margin-top: var(--spacing-md);
+    border-top: 1px solid var(--accent-dark-color);
+    padding-top: var(--spacing-sm);
+  }
+
   .App-wrapper .sticky-up-button {
     top: calc(100dvh - 8.5rem);
     bottom: auto;

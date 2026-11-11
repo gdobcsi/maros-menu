@@ -50,22 +50,34 @@
 .footer-credit {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
+  align-items: center;
+  gap: 4px;
+  line-height: 1;
   width: fit-content;
-  margin-left: auto;
-  font-size: var(--font-size-xs);
+  margin-inline: auto;
+  text-align: center;
+  font-size: var(--font-size-sm);
   color: inherit;
 }
 
-.footer-credit span[aria-label="love"] {
+.footer-credit-text {
+  color: var(--main-accent-color);
+  letter-spacing: 0.05em;
+}
+
+.footer-credit-text span {
   color: #e74c3c;
-  align-self: center;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .footer-credit a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
   color: var(--main-accent-color);
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
 }
 
