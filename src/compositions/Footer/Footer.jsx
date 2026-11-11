@@ -12,7 +12,7 @@ const Footer = ({
   googleMapsUrl,
 }) => {
   return (
-    <div className="footer" ref={footerRef}>
+    <footer className="footer" ref={footerRef}>
       <div className="footer-main">
         <div className="footer-top">
           {/* Contact */}
@@ -135,7 +135,7 @@ const Footer = ({
           </a>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
