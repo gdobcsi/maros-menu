@@ -215,6 +215,10 @@
     max-width: 62rem;
   }
 
+  .App-content .header {
+    margin-top: var(--spacing-lg);
+  }
+
   .App-content .top-controls {
     width: 65%;
   }
@@ -233,6 +237,10 @@
     width: calc((100% - 2 * var(--spacing-md)) / 3);
   }
 
+  .App-content .category {
+    width: 65%;
+  }
+
   /* Footer desktop layout */
   .footer .footer-main {
     padding-inline: 0;
@@ -247,11 +255,25 @@
     max-width: 62rem;
     margin-inline: auto;
   }
+
+  .footer .footer-bottom .footer-credit {
+    width: 35%;
+    max-width: 35%;
+  }
 }
 
 /* Large desktop >= 1200px */
 @media screen and (min-width: 75rem) {
   .App-content {
     max-width: 75rem;
+  }
+
+  .App-content .header {
+    margin-top: var(--spacing-lg);
+  }
+
+  .footer .footer-bottom .footer-credit {
+    width: 35%;
+    max-width: 35%;
   }
 }
