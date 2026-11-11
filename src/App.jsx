@@ -41,7 +41,7 @@ function App() {
   return (
     <div ref={appRef}>
       <div className="App-wrapper">
-        <div className="App-content" ref={contentRef}>
+        <main className="App-content" ref={contentRef}>
           <Header />
           <div className="top-controls">
             <PhoneAndOpeningTime
@@ -65,7 +65,7 @@ function App() {
               footerRef={footerRef}
             />
           )}
-        </div>
+        </main>
 
         <Footer
           footerRef={footerRef}
