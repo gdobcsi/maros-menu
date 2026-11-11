@@ -174,7 +174,7 @@ maros-menu/
 #### Repository klónozása
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/gdobcsi/maros-menu.git
 cd maros-menu
 ```
 
@@ -411,7 +411,7 @@ maros-menu/
 #### Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/gdobcsi/maros-menu.git
 cd maros-menu
 ```
 
