@@ -8,6 +8,10 @@
   background-color: var(--footer-bg-surface);
 }
 
+.footer h3 {
+  margin: 0;
+}
+
 .footer-main {
   display: flex;
   flex-direction: column;
@@ -33,6 +37,9 @@
   align-items: stretch;
   gap: var(--spacing-sm);
   padding-inline: var(--spacing-md);
+
+  border-top: 2px solid var(--accent-dark-color);
+  padding-top: var(--spacing-md);
 }
 
 .footer-copyright {

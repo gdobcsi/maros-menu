@@ -1,5 +1,21 @@
 /* Mobile < 576px */
 @media screen and (max-width: 35.999rem) {
+  .App-content .header {
+    margin-block: var(--spacing-lg);
+  }
+
+  .App-content .top-controls {
+    gap: var(--spacing-lg);
+  }
+
+  .App-wrapper .App-content {
+    padding-bottom: var(--spacing-md);
+  }
+
+  .App-wrapper .footer {
+    padding-bottom: var(--spacing-sm);
+  }
+
   .language-selector .language-button {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -53,6 +69,12 @@
   .phone-and-opening .opening-time .opening-day-sunday {
     grid-column: 1 / -1;
     grid-row: 4;
+  }
+
+  .footer .footer-main .footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
   }
 
   .sticky-up-button {
