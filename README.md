@@ -1,734 +1,475 @@
 # Maros Menu
 
-[Magyar dokumentáció](#magyar-dokumentacio) · [English documentation](#english-documentation)
+**Élő oldal / Live website:** [marosétterem.hu](https://marosétterem.hu)
 
-**Élő oldal / Live website:** [marosétterem.hu](https://marosétterem.hu)  
-*A domain már működik, de jelenleg még a korábbi verzió fut rajta. A refaktorált változat a következő deploy után lesz elérhető.*
+## Magyar dokumentáció
 
-------------------------------------------------------------------------
-
-<a id="magyar-dokumentacio"></a>
-# Magyar dokumentáció
-
-## Tartalomjegyzék
+### Tartalomjegyzék
 
 1. [A projektről](#a-projektről)
-2. [Fő funkciók](#hu-fo-funkciok)
-3. [Használt technológiák](#hu-technologiai-stack)
-4. [Nyelvek és lokalizáció](#hu-nyelvek-es-lokalizacio)
-5. [Adatstruktúra](#hu-adatstruktura)
-6. [Alkalmazásfelépítés](#hu-alkalmazasarchitektura)
-7. [CSS-struktúra és reszponzivitás](#hu-css-struktura)
-8. [Fejlesztési környezet](#hu-fejlesztoi-kornyezet)
-9. [Segédscriptek](#hu-segedscriptek)
-10. [Refaktorálási alapelvek](#hu-refaktor-alapelvek)
-11. [Technikai megjegyzések](#hu-technikai-megjegyzesek)
+2. [Fő funkciók](#fő-funkciók)
+3. [Technológiai háttér](#technológiai-háttér)
+4. [Nyelvek és lokalizáció](#nyelvek-és-lokalizáció)
+5. [Adatstruktúra](#adatstruktúra)
+6. [Alkalmazásfelépítés](#alkalmazásfelépítés)
+7. [Projektstruktúra](#projektstruktúra)
+8. [Telepítés és fejlesztés](#telepítés-és-fejlesztés)
+9. [Tesztek](#tesztek)
+10. [Segédscriptek és adatarchiválás](#segédscriptek-és-adatarchiválás)
 
+### A projektről
 
-## 1. A projektről
+A **Maros Menu** a nagymarosi Maros Étterem digitális étlapja. A projekt egy valós éttermi igényre ad megoldást: a vendégek telefonjukon vagy más eszközükön, külön alkalmazás telepítése nélkül tekinthetik meg az aktuális étlapot, válthatnak a rendelkezésre álló nyelvek között, és elérhetik az étterem legfontosabb információit.
 
-A **Maros Menu** egy reszponzív, többnyelvű éttermi étlapalkalmazás a
-Maros Étterem számára.
+Az alkalmazás több éve része az étterem digitális jelenlétének. A jelenlegi munka egy korábbi megoldás továbbfejlesztése és strukturális refaktorálása. A cél nem egy új felület vagy új funkciók bevezetése volt, hanem a meglévő alkalmazás kódjának, adatkezelésének és komponensstruktúrájának átláthatóbbá, következetesebbé és könnyebben karbantarthatóvá tétele.
 
-Az alkalmazás célja, hogy a vendégek egyszerűen megtekinthessék az
-étterem aktuális kínálatát, kiválaszthassák a kívánt nyelvet, valamint
-elérjék az étterem alapvető információit, például a telefonszámot és a
-nyitvatartást.
+### Fő funkciók
 
-A projekt egy korábbi, egyszerűbb adatszerkezetű megoldásból fejlődött
-tovább. A refaktorálás egyik fontos célja az volt, hogy a komponensek,
-az adatforrások és a stílusok átláthatóbb, következetesebb struktúrába
-kerüljenek.
+- Magyar, angol és német nyelvű étlap.
+- Nyelvválasztás a felületen.
+- Kategóriák és ételek nevének megjelenítése a kiválasztott nyelven.
+- Ételárak és a kiválasztott nyelvhez tartozó pénznem megjelenítése.
+- Éttermi telefonszám és nyitvatartás.
+- Hivatkozás az étterem Facebook-oldalára.
+- Beágyazott Google Maps térkép.
+- Vissza az oldal tetejére funkció.
 
-<a id="hu-fo-funkciok"></a>
-## 2. Fő funkciók
+### Technológiai háttér
 
--   Többnyelvű étlapmegjelenítés.
--   Nyelvválasztás magyar, angol és német nyelv között.
--   Az ételkategóriák és az ételek nevének megjelenítése a kiválasztott
-    nyelven.
--   Az ételek árának és a nyelvhez tartozó pénznemnek a megjelenítése.
--   Éttermi telefonszám és nyitvatartás megjelenítése.
--   Facebook-oldalra mutató hivatkozás.
--   Vissza az oldal tetejére funkció.
--   Reszponzív megjelenés különböző képernyőméreteken.
+| Technológia | Szerepe |
+|---|---|
+| React 18.2 | Komponensalapú felhasználói felület |
+| JavaScript | Alkalmazáslogika |
+| Create React App (`react-scripts` 5.0.1) | Fejlesztői szerver, build és tesztparancsok |
+| CSS | A felület megjelenítése |
+| JSON | Éttermi, nyelvi és étlapadatok tárolása |
+| Jest | Tesztfuttató |
+| React Testing Library | React-komponensek tesztelése |
+| `@testing-library/user-event` | Felhasználói interakciók szimulálása tesztekben |
+| `@testing-library/jest-dom` | Kiegészítő DOM-ellenőrzések |
 
-<a id="hu-technologiai-stack"></a>
-## 3. Használt technológiák
+A React és a React DOM production függőség. A `react-scripts` és a teszteléshez használt csomagok fejlesztői függőségek (`devDependencies`).
 
-  -----------------------------------------------------------------------
-  Technológia                         Szerepe
-  ----------------------------------- -----------------------------------
-  React 18                            Felhasználói felület és
-                                      komponensalapú felépítés
-
-  JavaScript                          Alkalmazáslogika
-
-  Create React App (`react-scripts`   Fejlesztői szerver, build és
-  5)                                  tesztfuttatás
-
-  CSS                                 Megjelenés és reszponzív stílusok
-
-  JSON                                Éttermi adatok, nyelvi konfiguráció
-                                      és étlapadatok
-
-  Jest                                Tesztfuttató, a Create React App
-                                      részeként
-
-  React Testing Library               React-komponensek tesztelése
-
-  `@testing-library/user-event`       Felhasználói interakciók
-                                      szimulálása tesztekben
-
-  `@testing-library/jest-dom`         Kiegészítő DOM-ellenőrzések a
-                                      tesztekhez
-  -----------------------------------------------------------------------
-
-A projekt jelenlegi konfigurációja React 18.2.0 és `react-scripts` 5.0.1
-verziókat használ.
-
-<a id="hu-nyelvek-es-lokalizacio"></a>
-## 4. Nyelvek és lokalizáció
+### Nyelvek és lokalizáció
 
 Az alkalmazás jelenleg három nyelvet támogat:
 
-  Nyelvkód   Nyelv    Nyelvválasztó felirata
-  ---------- -------- ------------------------
-  `hu`       Magyar   Étlap
-  `en`       Angol    Menu
-  `de`       Német    Menü
+| Nyelvkód | Nyelv | Nyelvválasztó felirata |
+|---|---|---|
+| `hu` | Magyar | Étlap |
+| `en` | Angol | Menu |
+| `de` | Német | Menü |
 
-A nyelvi választó beállításait a `src/data/languages.json` fájl
-tartalmazza. A rekordok egyedi `uid` értéket, nyelvkódot, feliratot,
-évet és zászlóképhez tartozó adatokat tartalmaznak.
+A nyelvválasztó konfigurációja a `src/data/languages.json` fájlban található. A kiválasztott nyelvkód alapján a `getLanguageMenu` segédfüggvény előállítja az adott nyelvhez tartozó étlapadatokat.
 
-A nyelvkódok kulcsként szolgálnak az étlapadatokban is. A kiválasztott
-nyelv alapján az alkalmazás a kategóriák és az ételek megfelelő
-fordítását jeleníti meg.
+A dokumentum nyelvi attribútuma (`html lang`) a kiválasztott nyelvhez igazodik.
 
-<a id="hu-json-adatstruktura"></a>
-## 5. JSON-adatstruktúrák és archiválás
+### Adatstruktúra
 
-Az alkalmazás adatainak egy része JSON-fájlokban található. Ez lehetővé
-teszi, hogy az étlap és az éttermi információk a React-komponensek
-logikájától elkülönítve legyenek karbantarthatók.
+Az alkalmazás tartalma külön JSON-fájlokban található, így az étlap és az éttermi információk a React-komponensek logikájától elkülönítve kezelhetők.
 
-### 5.1. Aktuális étlap
+#### Aktuális étlap
 
-Fájl: `src/data/menu/current/menu.json`
+`src/data/menu/current/menu.json`
 
-Az aktuális étlap legfelső szintjén a pénznemek és a kategóriák
-találhatók:
+Az aktuális étlap kategóriákból és az azokhoz tartozó ételekből áll. A legfontosabb mezők:
 
--   `currency`: a támogatott nyelvekhez tartozó pénznemjelölések.
--   `categories`: az ételkategóriák listája.
+- `currency`: a nyelvkódokhoz rendelt pénznemjelölések;
+- `categories`: az ételkategóriák listája;
+- `uid`: egyedi azonosító a kategóriákhoz és az ételekhez;
+- `title`: a kategória nyelvenkénti elnevezése;
+- `dishes`: a kategóriához tartozó ételek;
+- `hu`, `en`, `de`: az étel neve a támogatott nyelveken;
+- `price`: az étel ára.
 
-Egy kategória fő mezői:
+A feltöltött projektverzióban az aktuális étlap 5 kategóriát és 42 ételt tartalmazott. Az étlap tartalma változhat, ezért ez a szám nem az alkalmazás működésének állandó feltétele.
 
--   `uid`: egyedi azonosító.
--   `title`: a kategória fordításai nyelvkód szerint.
--   `dishes`: a kategóriához tartozó ételek listája.
+#### Nyelvi konfiguráció
 
-Egy étel fő mezői:
+`src/data/languages.json`
 
--   `uid`: egyedi azonosító.
--   `hu`, `en`, `de`: az étel neve a támogatott nyelveken.
--   `price`: az étel ára.
+A fájl tartalmazza a támogatott nyelvek kódját, a nyelvválasztó feliratát, valamint a zászlóképekhez és megjelenítésükhöz szükséges adatokat.
 
-A feltöltött projektállapotban az aktuális étlap 5 kategóriát és
-összesen 42 ételt tartalmazott. Ez az adat idővel változhat, ezért nem
-tekintendő állandó alkalmazásszabálynak.
+#### Éttermi adatok
 
-### 5.2. Nyelvi konfiguráció
+`src/data/restaurant.json`
 
-Fájl: `src/data/languages.json`
+A fájlban találhatók az étterem adatai, többek között:
 
-A nyelvválasztó elemei innen származnak. A konfiguráció tartalmazza
-többek között a nyelvkódot, a gomb feliratát, az évet és a zászló
-képének URL-jét.
+- név és telefonszám;
+- cím;
+- Facebook-oldal hivatkozása;
+- Google Maps beágyazási URL;
+- heti nyitvatartás.
 
-### 5.3. Éttermi adatok
+#### Archivált adatok
 
-Fájl: `src/data/restaurant.json`
+A korábbi étlapverziók és migrációs források a `src/data/archive/` és a `src/data/menu/archive/` könyvtárakban maradtak meg. Ezek nem az alkalmazás aktuális adatforrásai; történeti referenciaként és a korábbi adatszerkezetek megőrzése céljából szerepelnek a repositoryban.
 
-A fájl az étteremhez kapcsolódó adatokat tartalmazza, többek között:
+### Alkalmazásfelépítés
 
--   étterem neve;
--   telefonszám;
--   cím;
--   Facebook-hivatkozás;
--   nyitvatartás.
+Az alkalmazás kisebb, jól körülhatárolt komponensekből és több komponensből összeállított kompozíciókból épül fel.
 
-A nyitvatartási adatok napokra bontva tartalmazzák a nap nevét, a
-kezdési és zárási időt, valamint azt, hogy az adott napon zárva tart-e
-az étterem.
+- **`components/`** – önálló felületi elemek, például a fejléc, a nyelvválasztó, az étlap, a telefonszám, a nyitvatartás és a vissza az oldal tetejére gomb.
+- **`compositions/`** – összetettebb felületi egységek, például a telefonszámot és nyitvatartást összefogó rész, valamint a lábléc.
+- **`data/`** – az alkalmazás JSON-adatforrásai és archívumai.
+- **`utils/`** – a megjelenítéstől elkülönített adat-előkészítő segédfüggvények.
+- **`css/`** – az alkalmazás közös stílus- és változófájljai.
 
-### 5.4. Archivált adatok
+#### Főbb komponensek
 
-A korábbi étlapverziók és migrációs források megőrzése fontos a projekt
-fejlődésének követhetősége miatt.
+| Elem | Felelősség |
+|---|---|
+| `App` | Az alkalmazás fő komponense; összefogja az adatokat, az állapotot és a fő felületi egységeket |
+| `Header` | Az étterem logójának megjelenítése |
+| `LanguageSelector` | A nyelvek megjelenítése és a nyelvválasztás kezelése |
+| `Menu` | A kiválasztott nyelvű kategóriák és ételek megjelenítése |
+| `Phone` | Az étterem telefonszámának megjelenítése |
+| `OpeningTimes` | A nyitvatartás megjelenítése |
+| `StickyUpButton` | Visszagörgetés az oldal tetejére |
+| `PhoneAndOpening` | A telefonszám és a nyitvatartás közös felületi egysége |
+| `Footer` | Kapcsolati adatok, cím, térkép és közösségi hivatkozás megjelenítése |
 
-Az archivált adatok nem az alkalmazás aktuális adatforrásai. A korábbi
-struktúrák történeti és későbbi referencia céljából maradnak meg.
+#### A nyelvváltás adatfolyama
 
-A jelenlegi adatszervezésben az étlaparchívum a `src/data/menu/archive/`
-könyvtár alatt található. A korábbi, már nem használt gyökérszintű
-JSON-fájlok a projektgazda döntése alapján a `src/data/archive/`
-könyvtárba kerülnek.
+1. Az alkalmazás importálja a nyelvi konfigurációt és az éttermi adatokat.
+2. A felhasználó kiválaszt egy nyelvet.
+3. A kiválasztott nyelvkód az alkalmazás állapotába kerül.
+4. A `getLanguageMenu` segédfüggvény előállítja a kiválasztott nyelvhez tartozó étlapstruktúrát.
+5. A `Menu` komponens megjeleníti a kategóriákat, az ételeket, az árakat és a pénznemet.
 
-<a id="hu-alkalmazasarchitektura"></a>
-## 6. Komponens- és alkalmazásarchitektúra
+### Projektstruktúra
 
-Az alkalmazás komponensekre és kompozíciókra bontva épül fel.
+A repository főbb könyvtárai és fájljai:
 
--   **Komponensek (`components`)**: kisebb, jól körülhatárolt felületi
-    elemek, például fejléc, nyelvválasztó, étlap, telefonszám,
-    nyitvatartás és vissza a tetejére gomb.
--   **Kompozíciók (`compositions`)**: több kisebb komponensből felépülő,
-    összetettebb felületi egységek, például a telefonszámot és
-    nyitvatartást együtt megjelenítő rész, illetve a lábléc.
--   **Segédfüggvények (`utils`)**: az alkalmazás adatainak előkészítését
-    segítő, a megjelenítéstől elkülönített logika.
-
-### Főbb komponensek
-
-  -----------------------------------------------------------------------
-  Elem                                Feladat
-  ----------------------------------- -----------------------------------
-  `App`                               Az alkalmazás fő komponense;
-                                      összefogja az adatokat, az
-                                      állapotot és a fő felületi
-                                      egységeket
-
-  `Header`                            Az étterem logójának megjelenítése
-
-  `LanguageSelector`                  A rendelkezésre álló nyelvek
-                                      megjelenítése és a kiválasztás
-                                      kezelése
-
-  `Menu`                              A kiválasztott nyelvű kategóriák és
-                                      ételek megjelenítése
-
-  `Phone`                             Telefonszám megjelenítése
-
-  `OpeningTimes`                      Nyitvatartás megjelenítése
-
-  `StickyUpButton`                    Visszagörgetés az oldal tetejére
-
-  `PhoneAndOpeningTime`               A telefonszám és nyitvatartás közös
-                                      felületi egysége
-
-  `Footer`                            Lábléc, Facebook-hivatkozás és
-                                      telefonszám
-  -----------------------------------------------------------------------
-
-### Nyelvváltás adatfolyamának áttekintése
-
-1.  Az alkalmazás betölti a nyelvi konfigurációt és az aktuális
-    étlapadatokat.
-2.  A felhasználó kiválaszt egy nyelvet.
-3.  A kiválasztott nyelvkód az alkalmazás állapotába kerül.
-4.  A `getLanguageMenu` segédfüggvény előállítja a megjelenítendő,
-    kiválasztott nyelvű étlapstruktúrát.
-5.  A `Menu` komponens megjeleníti a kategóriákat, az ételeket, az
-    árakat és a pénznemet.
-
-<a id="hu-css-struktura"></a>
-## 7. CSS-struktúra és reszponzivitás
-
-A stílusok több, felelősség szerint elkülönített CSS-fájlban találhatók.
-
--   `src/css/variables.css`: közös CSS-változók, például színek,
-    térközök, betűméretek és betűvastagságok.
--   `src/css/App.css`: az alkalmazás fő elrendezéséhez kapcsolódó
-    stílusok.
--   `src/css/responsive.css`: reszponzív szabályok.
--   A komponensekhez és kompozíciókhoz saját CSS-fájlok tartoznak.
-
-A CSS-refaktor célja a meglévő vizuális megjelenés megőrzése mellett a
-stílusok következetesebbé és karbantarthatóbbá tétele volt. A refaktor
-nem jelentett teljes UI/UX-újratervezést.
-
-A közös változók többek között az alábbi területeket fedik le:
-
--   háttérfelületek és kiemelőszínek;
--   szegélyek és lekerekítések;
--   térközök;
--   betűméretek és betűvastagságok.
-
-A projektben a gyökér betűméret 16px maradt, így az `rem` mértékegység
-ehhez viszonyul. A nagyobb vizuális és tipográfiai változtatások külön,
-későbbi UI/UX-feladatnak számítanak.
-
-A reszponzív ellenőrzés több mobil-, tablet- és asztali nézetet is
-érintett. A cél az volt, hogy a tartalom különböző képernyőméreteken is
-használható maradjon, és ne jelenjen meg nem kívánt vízszintes görgetés.
-
-<a id="hu-fejlesztoi-kornyezet"></a>
-## 8. Telepítés, fejlesztői szerver és build
-
-### Előfeltételek
-
--   Node.js
--   npm
-
-### Telepítés
-
-A projekt gyökérkönyvtárában:
-
-``` bash
-npm install
+```text
+maros-menu/
+├── public/                  # HTML-sablon, manifest és publikus ikonok
+├── scripts/                 # Adat-előkészítő és migrációs scriptek
+│   └── outputs/             # Migrációs kimenetek
+├── src/
+│   ├── assets/               # Logó és egyéb statikus erőforrások
+│   ├── components/           # Önálló React-komponensek
+│   ├── compositions/         # Több komponensből álló felületi egységek
+│   ├── css/                  # Közös CSS-fájlok
+│   ├── data/                 # Aktuális és archivált JSON-adatok
+│   ├── utils/                # Adatfeldolgozó segédfüggvények
+│   ├── App.jsx               # Fő alkalmazáskomponens
+│   ├── App.test.js           # Alkalmazástesztek
+│   ├── index.js              # React belépési pont
+│   └── setupTests.js         # Tesztkörnyezet beállítása
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
 ```
 
-### Fejlesztői szerver
+### Telepítés és fejlesztés
 
-``` bash
+#### Előfeltételek
+
+- Node.js
+- npm
+
+#### Repository klónozása
+
+```bash
+git clone <repository-url>
+cd maros-menu
+```
+
+A `<repository-url>` helyére a GitHub repository tényleges klónozási URL-je kerül.
+
+#### Függőségek telepítése
+
+A `package-lock.json` alapján reprodukálható telepítéshez:
+
+```bash
+npm ci
+```
+
+#### Fejlesztői szerver indítása
+
+```bash
 npm start
 ```
 
-A Create React App elindítja a fejlesztői szervert. Alapértelmezés
-szerint az alkalmazás a `http://localhost:3000` címen érhető el.
+A Create React App alapértelmezés szerint a `http://localhost:3000` címen indítja el az alkalmazást.
 
-### Production build
+#### Production build készítése
 
-``` bash
+```bash
 npm run build
 ```
 
-A parancs optimalizált, éles környezetben kiszolgálható buildet készít a
-`build/` könyvtárba.
+A parancs optimalizált, éles környezetben kiszolgálható buildet készít a `build/` könyvtárba.
 
 ### Tesztek
 
-``` bash
+A projekt tesztjeit a Jest és a React Testing Library futtatja.
+
+```bash
 npm test
 ```
 
-A teszteket a Create React App által biztosított Jest környezet
-futtatja. A projektben React Testing Library és `user-event` is
-rendelkezésre áll a komponensek és felhasználói interakciók
-tesztelésére.
+Egyszeri, nem interaktív futtatás:
 
-### Build előnézete helyi környezetben
-
-A production build helyi megtekintéséhez például használható a `serve`
-csomag, ha telepítve van:
-
-``` bash
-npx serve -s build
+```bash
+npm test -- --watchAll=false
 ```
 
-<a id="hu-segedscriptek"></a>
-## 9. Segédscriptek
+A jelenlegi tesztek ellenőrzik a nyelvválasztó gombok megjelenését, valamint azt, hogy angol nyelvre váltáskor megjelenik az angol étlap és a hozzá tartozó pénznem.
 
-A projekt `scripts/` könyvtárában adat-előkészítést segítő Node.js
-scriptek találhatók.
+A `src/setupTests.js` fájl a `jest-dom` kiegészítést tölti be, és tesztkörnyezetben helyettesíti a böngészőben elérhető `IntersectionObserver` API-t, amelyet a `StickyUpButton` használ.
 
--   `scripts/uidGenerator.js`: egyedi azonosítók előállítását segítő
-    függvényeket tartalmaz.
--   `scripts/migration.js`: korábbi étlapadatok új struktúrába történő
-    átalakítására készült migrációs script.
+### Segédscriptek és adatarchiválás
 
-Ezek nem a böngészőben futó alkalmazás részei, hanem
-fejlesztési/adatmigrációs segédeszközök.
+A `scripts/` könyvtárban adat-előkészítést segítő Node.js scriptek találhatók:
 
-<a id="hu-refaktor-alapelvek"></a>
-## 10. Refaktorálási alapelvek
+- `scripts/uidGenerator.js` – egyedi azonosítók előállítását segítő függvények.
+- `scripts/migration.js` – korábbi étlapadatok új adatszerkezetbe történő átalakítása.
 
-A közös refaktorálás során az alábbi szempontok voltak fontosak:
+A migrációs script a `src/data/menu/archive/migrated/2026_summer/source.json` fájlt olvassa be, és az eredményt a `scripts/outputs/` könyvtárba írja. A script a projekt gyökérkönyvtárából az alábbi paranccsal futtatható:
 
--   A komponensek felelősségi köre legyen egyértelmű.
--   A komponensek csak a működésükhöz szükséges adatokat kapják meg.
--   Az adatkezelés és a megjelenítés logikája legyen elkülönítve.
--   A JSON-adatok következetes, egyedi azonosítókat használjanak.
--   A CSS legyen átlátható, következetes és újrafelhasználható.
--   A meglévő dizájn a refaktor során maradjon változatlan.
--   A régi adatszerkezetek archiválva maradjanak, ha történeti értékük
-    van.
--   A módosításokat kis, ellenőrizhető lépésekben kell elvégezni.
+```bash
+node scripts/migration.js
+```
 
-<a id="hu-technikai-megjegyzesek"></a>
-## 11. Ismert technikai megjegyzések
-
-A projekt Create React App alapokon működik. A Create React App már nem
-aktívan karbantartott eszköz, ezért a build- és függőségfrissítési
-kérdések későbbi technikai karbantartási feladatot jelenthetnek.
-
-A fejlesztés során korábban megjelentek elavult Browserslist-adatbázisra
-és a CRA Babel-függőségeire vonatkozó figyelmeztetések. Ezek nem az
-alkalmazás CSS-refaktorának hibái.
-
-Egy korábbi `npm audit` futtatás 170 sérülékenységet jelzett (21 low,
-113 moderate, 32 high, 4 critical). Ez a jelentés a futtatás időpontjára
-és az akkori telepített függőségekre vonatkozott; az aktuális állapotot
-új `npm audit` futtatással kell ellenőrizni. A függőségek frissítése
-előtt célszerű a változtatásokat külön megtervezni és tesztelni.
-
-------------------------------------------------------------------------
-
-<a id="english-documentation"></a>
-<a id="english-documentation"></a>
-# English Documentation
-
-**Live website:** [marosétterem.hu](https://marosétterem.hu)  
-*The domain is already live, but it currently serves the previous version. The refactored version will be available after the next deployment.*
-
-## Table of Contents
-
-1. [About the project](#about-the-project)
-2. [Main features](#en-main-features)
-3. [Technology stack](#en-technology-stack)
-4. [Languages and localization](#en-languages-and-localization)
-5. [Data structure](#en-data-structure)
-6. [Application architecture](#en-application-architecture)
-7. [CSS structure and responsiveness](#en-css-structure)
-8. [Development setup](#en-development-setup)
-9. [Utility scripts](#en-utility-scripts)
-10. [Refactoring principles](#en-refactoring-principles)
-11. [Technical notes](#en-technical-notes)
-
-
-## Table of Contents
-
-1. [About the project](#en-about-the-project)
-2. [Main features](#en-main-features)
-3. [Technology stack](#en-technology-stack)
-4. [Languages and localization](#en-languages-and-localization)
-5. [JSON data structure and archives](#en-json-data-structure)
-6. [Component and application architecture](#en-application-architecture)
-7. [CSS structure and responsiveness](#en-css-structure)
-8. [Installation, development server, and build](#en-development-setup)
-9. [Utility scripts](#en-utility-scripts)
-10. [Refactoring principles](#en-refactoring-principles)
-11. [Known technical notes](#en-technical-notes)
+Ezek fejlesztési és adatkarbantartási segédeszközök, nem részei a böngészőben futó alkalmazásnak.
 
 ---
 
-<a id="en-about-the-project"></a>
-## 1. About the project
+## English documentation
 
-**Maros Menu** is a responsive, multilingual restaurant menu application
-for Maros Étterem.
+### Table of contents
 
-The application allows visitors to browse the restaurant's current menu,
-choose a language, and view essential restaurant information such as the
-phone number and opening hours.
+1. [About the project](#about-the-project)
+2. [Main features](#main-features)
+3. [Technology stack](#technology-stack)
+4. [Languages and localization](#languages-and-localization)
+5. [Data structure](#data-structure)
+6. [Application architecture](#application-architecture)
+7. [Project structure](#project-structure)
+8. [Installation and development](#installation-and-development)
+9. [Tests](#tests)
+10. [Utility scripts and data archives](#utility-scripts-and-data-archives)
 
-The project evolved from an earlier implementation with a simpler data
-structure. One of the main goals of the refactoring work was to make the
-components, data sources, and styles more consistent, structured, and
-maintainable.
+### About the project
 
-<a id="en-main-features"></a>
-## 2. Main features
+**Maros Menu** is the digital restaurant menu for Maros Étterem in Nagymaros, Hungary. It addresses a real need in the restaurant's day-to-day operation: visitors can browse the current menu on a phone or another device without installing a separate application, switch between the available languages, and access essential restaurant information.
 
--   Multilingual menu display.
--   Language selection in Hungarian, English, and German.
--   Localized category and dish names.
--   Dish prices and the currency associated with the selected language.
--   Restaurant phone number and opening hours.
--   Link to the restaurant's Facebook page.
--   Back-to-top functionality.
--   Responsive layout for different screen sizes.
+The application has been part of the restaurant's digital presence for several years. The current work builds on an earlier implementation and focuses on refactoring its structure. The goal is not to introduce a new interface or additional features, but to make the existing codebase, data handling, and component structure clearer, more consistent, and easier to maintain.
 
-<a id="en-technology-stack"></a>
-## 3. Technology stack
+### Main features
 
-  -----------------------------------------------------------------------
-  Technology                          Purpose
-  ----------------------------------- -----------------------------------
-  React 18                            User interface and component-based
-                                      architecture
+- Menu available in Hungarian, English, and German.
+- Language selection directly in the interface.
+- Localized category and dish names.
+- Dish prices and the currency associated with the selected language.
+- Restaurant phone number and opening hours.
+- Link to the restaurant's Facebook page.
+- Embedded Google Maps location.
+- Back-to-top button.
 
-  JavaScript                          Application logic
+### Technology stack
 
-  Create React App (`react-scripts`   Development server, production
-  5)                                  build, and test runner
+| Technology | Purpose |
+|---|---|
+| React 18.2 | Component-based user interface |
+| JavaScript | Application logic |
+| Create React App (`react-scripts` 5.0.1) | Development server, build, and test commands |
+| CSS | User interface styling |
+| JSON | Restaurant, language, and menu data |
+| Jest | Test runner |
+| React Testing Library | React component testing |
+| `@testing-library/user-event` | Simulating user interactions in tests |
+| `@testing-library/jest-dom` | Additional DOM assertions |
 
-  CSS                                 Styling and responsive layout
+React and React DOM are production dependencies. `react-scripts` and the testing packages are development dependencies (`devDependencies`).
 
-  JSON                                Restaurant data, language
-                                      configuration, and menu data
-
-  Jest                                Test runner, provided through
-                                      Create React App
-
-  React Testing Library               React component testing
-
-  `@testing-library/user-event`       Simulating user interactions in
-                                      tests
-
-  `@testing-library/jest-dom`         Additional DOM assertions for tests
-  -----------------------------------------------------------------------
-
-The project configuration uses React 18.2.0 and `react-scripts` 5.0.1.
-
-<a id="en-languages-and-localization"></a>
-## 4. Languages and localization
+### Languages and localization
 
 The application currently supports three languages:
 
-  Language code   Language    Language selector label
-  --------------- ----------- -------------------------
-  `hu`            Hungarian   Étlap
-  `en`            English     Menu
-  `de`            German      Menü
+| Language code | Language | Selector label |
+|---|---|---|
+| `hu` | Hungarian | Étlap |
+| `en` | English | Menu |
+| `de` | German | Menü |
 
-The language selector configuration is stored in
-`src/data/languages.json`. Each record contains a unique `uid`, language
-code, label, year, and flag image information.
+The language selector configuration is stored in `src/data/languages.json`. The selected language code is passed to the `getLanguageMenu` utility, which prepares the menu data for the selected language.
 
-The language codes are also used as keys in the menu data. When a
-visitor selects a language, the application displays the corresponding
-translations for categories and dishes.
+The document language attribute (`html lang`) is updated when the visitor changes the selected language.
 
-<a id="en-json-data-structure"></a>
-## 5. JSON data structure and archives
+### Data structure
 
-Some application data is stored in JSON files. This keeps menu content
-and restaurant information separate from the React component logic.
+Application content is stored in separate JSON files. This keeps menu content and restaurant information independent from React component logic.
 
-### 5.1. Current menu
+#### Current menu
 
-File: `src/data/menu/current/menu.json`
+`src/data/menu/current/menu.json`
 
-The top-level menu structure contains currency definitions and
-categories:
+The current menu consists of categories and their dishes. Its main fields are:
 
--   `currency`: currency labels associated with supported languages.
--   `categories`: the list of menu categories.
+- `currency`: currency labels mapped to language codes;
+- `categories`: the list of menu categories;
+- `uid`: unique identifiers for categories and dishes;
+- `title`: category title translated by language;
+- `dishes`: the dishes belonging to a category;
+- `hu`, `en`, `de`: localized dish names;
+- `price`: the dish price.
 
-Main category fields:
+The uploaded project snapshot contained 5 categories and 42 dishes. Menu content can change, so these numbers are not fixed application requirements.
 
--   `uid`: unique identifier.
--   `title`: localized category titles keyed by language code.
--   `dishes`: the dishes belonging to the category.
+#### Language configuration
 
-Main dish fields:
+`src/data/languages.json`
 
--   `uid`: unique identifier.
--   `hu`, `en`, `de`: localized dish names.
--   `price`: dish price.
+This file contains the supported language codes, selector labels, and the information required to display the corresponding flag images.
 
-In the uploaded project snapshot, the current menu contained 5
-categories and 42 dishes in total. This content may change over time and
-should not be treated as a fixed application rule.
+#### Restaurant information
 
-### 5.2. Language configuration
+`src/data/restaurant.json`
 
-File: `src/data/languages.json`
+This file stores restaurant information, including:
 
-This file provides the language selector entries, including language
-codes, button labels, year, and flag image URLs.
+- restaurant name and phone number;
+- address;
+- Facebook page URL;
+- Google Maps embed URL;
+- weekly opening hours.
 
-### 5.3. Restaurant information
+#### Archived data
 
-File: `src/data/restaurant.json`
+Previous menu versions and migration sources are retained in `src/data/archive/` and `src/data/menu/archive/`. These files are not used as the current application data source; they are kept for historical reference and to preserve earlier data structures.
 
-This file contains restaurant-related information, including:
+### Application architecture
 
--   restaurant name;
--   phone number;
--   address;
--   Facebook URL;
--   opening hours.
+The application is built from focused UI components and compositions made up of multiple components.
 
-Opening hours are stored by day and include the day label, opening and
-closing times, and a flag indicating whether the restaurant is closed on
-that day.
+- **`components/`** – individual UI elements such as the header, language selector, menu, phone number, opening hours, and back-to-top button.
+- **`compositions/`** – larger UI sections, including the combined phone-and-opening-hours section and the footer.
+- **`data/`** – application JSON data and archives.
+- **`utils/`** – data preparation helpers separated from presentation logic.
+- **`css/`** – shared application styles and variables.
 
-### 5.4. Archived data
+#### Main components
 
-Preserving previous menu versions and migration sources is useful for
-tracking the evolution of the project.
+| Element | Responsibility |
+|---|---|
+| `App` | Main application component; coordinates data, state, and primary UI sections |
+| `Header` | Displays the restaurant logo |
+| `LanguageSelector` | Displays available languages and handles language selection |
+| `Menu` | Displays categories and dishes in the selected language |
+| `Phone` | Displays the restaurant phone number |
+| `OpeningTimes` | Displays opening hours |
+| `StickyUpButton` | Scrolls back to the top of the page |
+| `PhoneAndOpening` | Combines the phone number and opening hours into one UI section |
+| `Footer` | Displays contact information, address, map, and social link |
 
-Archived data is not used as the application's current data source. It
-is retained for historical reference and as a record of earlier data
-structures.
+#### Language selection data flow
 
-The menu archive is organized under `src/data/menu/archive/`. At the
-project owner's request, older root-level JSON files that are no longer
-used are being moved to `src/data/archive/`.
+1. The application imports the language configuration and restaurant data.
+2. The visitor selects a language.
+3. The selected language code is stored in application state.
+4. The `getLanguageMenu` utility prepares the menu structure for the selected language.
+5. The `Menu` component renders the categories, dishes, prices, and currency.
 
-<a id="en-application-architecture"></a>
-## 6. Component and application architecture
+### Project structure
 
-The application is organized into components and compositions.
+The main repository directories and files:
 
--   **Components (`components`)**: smaller, focused UI elements such as
-    the header, language selector, menu, phone number, opening hours,
-    and back-to-top button.
--   **Compositions (`compositions`)**: larger UI sections built from
-    smaller components, such as the combined phone-and-opening-hours
-    section and the footer.
--   **Utilities (`utils`)**: logic that prepares application data
-    separately from the presentation layer.
-
-### Main UI elements
-
-  -----------------------------------------------------------------------
-  Element                             Responsibility
-  ----------------------------------- -----------------------------------
-  `App`                               Main application component;
-                                      coordinates data, state, and the
-                                      main UI sections
-
-  `Header`                            Displays the restaurant logo
-
-  `LanguageSelector`                  Displays available languages and
-                                      handles language selection
-
-  `Menu`                              Displays categories and dishes in
-                                      the selected language
-
-  `Phone`                             Displays the restaurant phone
-                                      number
-
-  `OpeningTimes`                      Displays opening hours
-
-  `StickyUpButton`                    Scrolls back to the top of the page
-
-  `PhoneAndOpeningTime`               Combines the phone number and
-                                      opening hours into one UI section
-
-  `Footer`                            Displays the footer, Facebook link,
-                                      and phone number
-  -----------------------------------------------------------------------
-
-### Language selection data flow
-
-1.  The application loads the language configuration and current menu
-    data.
-2.  The visitor selects a language.
-3.  The selected language code is stored in application state.
-4.  The `getLanguageMenu` utility prepares the menu structure for the
-    selected language.
-5.  The `Menu` component renders the categories, dishes, prices, and
-    currency.
-
-<a id="en-css-structure"></a>
-## 7. CSS structure and responsiveness
-
-Styles are separated into CSS files according to responsibility.
-
--   `src/css/variables.css`: shared CSS variables, including colors,
-    spacing, font sizes, and font weights.
--   `src/css/App.css`: styles for the main application layout.
--   `src/css/responsive.css`: responsive rules.
--   Components and compositions have their own CSS files.
-
-The goal of the CSS refactoring was to make styles more consistent and
-maintainable while preserving the existing visual design. The
-refactoring was not a complete UI/UX redesign.
-
-Shared variables cover areas such as:
-
--   background surfaces and accent colors;
--   borders and border radii;
--   spacing;
--   font sizes and font weights.
-
-The root font size remains 16px, so `rem` values are relative to that
-base. Larger visual and typography changes are considered a separate
-future UI/UX task.
-
-Responsive checks covered mobile, tablet, and desktop viewport sizes.
-The goal was to keep the content usable across screen sizes and avoid
-unwanted horizontal scrolling.
-
-<a id="en-development-setup"></a>
-## 8. Installation, development server, and build
-
-### Prerequisites
-
--   Node.js
--   npm
-
-### Install dependencies
-
-From the project root:
-
-``` bash
-npm install
+```text
+maros-menu/
+├── public/                  # HTML template, manifest, and public icons
+├── scripts/                 # Data preparation and migration scripts
+│   └── outputs/             # Migration outputs
+├── src/
+│   ├── assets/               # Logo and other static assets
+│   ├── components/           # Individual React components
+│   ├── compositions/         # UI sections composed of multiple components
+│   ├── css/                  # Shared CSS files
+│   ├── data/                 # Current and archived JSON data
+│   ├── utils/                # Data preparation utilities
+│   ├── App.jsx               # Main application component
+│   ├── App.test.js           # Application tests
+│   ├── index.js              # React entry point
+│   └── setupTests.js         # Test environment setup
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
 ```
 
-### Start the development server
+### Installation and development
 
-``` bash
+#### Prerequisites
+
+- Node.js
+- npm
+
+#### Clone the repository
+
+```bash
+git clone <repository-url>
+cd maros-menu
+```
+
+Replace `<repository-url>` with the actual GitHub clone URL.
+
+#### Install dependencies
+
+For a reproducible installation based on `package-lock.json`:
+
+```bash
+npm ci
+```
+
+#### Start the development server
+
+```bash
 npm start
 ```
 
-Create React App starts the development server. By default, the
-application is available at `http://localhost:3000`.
+Create React App starts the application at `http://localhost:3000` by default.
 
-### Create a production build
+#### Create a production build
 
-``` bash
+```bash
 npm run build
 ```
 
 This creates an optimized production build in the `build/` directory.
 
-### Run tests
+### Tests
 
-``` bash
+The project uses Jest and React Testing Library.
+
+```bash
 npm test
 ```
 
-Tests run in the Jest environment provided by Create React App. React
-Testing Library and `user-event` are also available for testing
-components and user interactions.
+To run the tests once without watch mode:
 
-### Preview the production build locally
-
-For example, the production build can be served locally with the `serve`
-package, if available:
-
-``` bash
-npx serve -s build
+```bash
+npm test -- --watchAll=false
 ```
 
-<a id="en-utility-scripts"></a>
-## 9. Utility scripts
+The current tests check that the language selector buttons render and that selecting English displays the English menu and its associated currency.
 
-The `scripts/` directory contains Node.js utilities for data
-preparation.
+The `src/setupTests.js` file loads the `jest-dom` matchers and provides a test-only mock for the browser's `IntersectionObserver` API, which is used by `StickyUpButton`.
 
--   `scripts/uidGenerator.js`: helper functions for generating unique
-    identifiers.
--   `scripts/migration.js`: a migration script created to transform
-    older menu data into the newer structure.
+### Utility scripts and data archives
 
-These scripts are development and data-migration tools; they are not
-part of the browser application runtime.
+The `scripts/` directory contains Node.js utilities for data preparation:
 
-<a id="en-refactoring-principles"></a>
-## 10. Refactoring principles
+- `scripts/uidGenerator.js` – helper functions for generating unique identifiers.
+- `scripts/migration.js` – transforms older menu data into the newer data structure.
 
-The shared refactoring work followed these principles:
+The migration script reads `src/data/menu/archive/migrated/2026_summer/source.json` and writes its output to the `scripts/outputs/` directory. Run it from the project root:
 
--   Keep component responsibilities clear.
--   Pass components only the data they need.
--   Separate data preparation from presentation logic.
--   Use consistent unique identifiers in JSON data.
--   Keep CSS clear, consistent, and reusable.
--   Preserve the existing design during refactoring.
--   Keep older data structures archived when they have historical value.
--   Make changes in small, verifiable steps.
+```bash
+node scripts/migration.js
+```
 
-<a id="en-technical-notes"></a>
-## 11. Known technical notes
-
-The project is built with Create React App. Create React App is no
-longer actively maintained, so build tooling and dependency maintenance
-may need attention in a future maintenance phase.
-
-Earlier development runs produced warnings about an outdated
-Browserslist database and CRA Babel dependencies. These warnings were
-not CSS refactoring errors.
-
-A previous `npm audit` run reported 170 vulnerabilities (21 low, 113
-moderate, 32 high, and 4 critical). This report reflected the installed
-dependencies at the time it was run; the current state should be checked
-by running `npm audit` again. Dependency upgrades should be planned and
-tested separately before applying them.
+These are development and data-maintenance tools; they are not part of the browser application runtime.
