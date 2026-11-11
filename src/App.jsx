@@ -25,6 +25,10 @@ function App() {
   const [scrollTrigger, setScrollTrigger] = useState(0);
 
   useEffect(() => {
+    document.documentElement.lang = selectedLanguage ?? "hu";
+  }, [selectedLanguage]);
+
+  useEffect(() => {
     if (menuRef.current !== null)
       menuRef.current.scrollIntoView({
         behavior: "smooth",
