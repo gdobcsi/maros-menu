@@ -87,11 +87,20 @@
 /* Tablet >= 576px*/
 @media screen and (min-width: 36rem) {
   .App-content {
-    max-width: 36rem;
+    max-width: 48rem;
+  }
+
+  .App-content .header {
+    margin-block: var(--spacing-lg);
+  }
+
+  .header-logo {
+    max-width: 700px;
   }
 
   .App-content .top-controls {
     width: 70%;
+    /* gap: var(--spacing-lg); */
   }
 
   .App-content .language-selector {
@@ -102,11 +111,46 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
+
+    margin-block: var(--spacing-lg);
   }
 
   .App-content .language-button {
-    width: calc(50% - var(--spacing-md) / 2);
+    width: auto;
+    max-width: 200px;
+    flex: 1 1 0;
+
+    padding: var(--spacing-md) var(--spacing-sm);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+
+  .App-content .language-button .language-info {
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .App-content .language-button .language-info p {
+    margin: 0;
+  }
+
+  .App-content .language-button > span {
+    line-height: 1.2;
+  }
+
+  .App-content .category-title {
+    font-size: 2.7rem;
+    margin-bottom: 0;
+  }
+
+  .App-content .dish {
+    margin-top: var(--spacing-md);
   }
 
   /* Footer tablet layout */
@@ -114,12 +158,15 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: var(--spacing-lg);
-    row-gap: var(--spacing-xl);
+    row-gap: var(--spacing-xxl);
     align-items: start;
   }
 
   .footer .footer-main .footer-map {
     grid-column: 1 / -1;
+    width: 100%;
+    max-width: 36rem;
+    margin-inline: auto;
   }
 
   .footer .footer-main .footer-top {
@@ -128,6 +175,37 @@
     justify-content: center;
     align-items: flex-start;
     gap: var(--spacing-xxl);
+  }
+
+  .footer-contact h3,
+  .opening-times h3 {
+    padding-bottom: 1rem;
+  }
+
+  .footer .footer-bottom .footer-credit {
+    width: 50%;
+    margin-top: var(--spacing-md);
+    border-top: 1px solid var(--accent-dark-color);
+    padding-top: var(--spacing-md);
+  }
+
+  /* Sticky button tablet behavior */
+  .App-wrapper .sticky-up-button {
+    top: calc(100dvh - 8.5rem);
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+
+  .sticky-up-button.is-footer-visible {
+    top: 40%;
+  }
+
+  .sticky-up-button:hover {
+    transform: translateY(-50%) translateY(-2px);
+  }
+
+  .sticky-up-button:active {
+    transform: translateY(-50%) scale(0.96);
   }
 }
 
