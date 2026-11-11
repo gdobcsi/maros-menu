@@ -3,7 +3,7 @@ import "./PhoneAndOpening.css";
 import OpeningTimes from "../../components/OpeningTimes/OpeningTimes";
 import Phone from "../../components/Phone/Phone";
 
-const PhoneAndOpeningTime = ({ phone, openingTimes }) => {
+const PhoneAndOpening = ({ phone, openingTimes }) => {
   return (
     <div className="phone-and-opening-wrapper">
       <div className="phone-and-opening">
@@ -14,4 +14,4 @@ const PhoneAndOpeningTime = ({ phone, openingTimes }) => {
   );
 };
 
-export default PhoneAndOpeningTime;
+export default PhoneAndOpening;

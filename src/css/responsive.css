@@ -43,34 +43,6 @@
     grid-row: 2;
   }
 
-  .opening-time {
-    display: flex;
-    width: 220px;
-  }
-
-  .phone-and-opening .opening-time .opening-time-box {
-    display: none;
-  }
-
-  .phone-and-opening .opening-time .opening-text {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(3, auto) auto;
-    grid-auto-flow: column;
-    justify-items: stretch;
-    align-items: start;
-    width: 100%;
-  }
-
-  .opening-day {
-    text-align: center;
-  }
-
-  .phone-and-opening .opening-time .opening-day-sunday {
-    grid-column: 1 / -1;
-    grid-row: 4;
-  }
-
   .footer .footer-main .footer-top {
     display: flex;
     flex-direction: column;

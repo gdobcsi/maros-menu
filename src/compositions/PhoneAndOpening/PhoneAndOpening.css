@@ -1,6 +1,5 @@
 .phone-and-opening-wrapper {
   width: 100%;
-
   margin: 0;
 
   display: grid;
@@ -8,64 +7,17 @@
 }
 
 .phone-and-opening {
-  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
 
+  width: fit-content;
   margin: 0 auto;
 
-  padding: var(--spacing-xs) var(--spacing-xl) 0;
+  padding: var(--spacing-md) var(--spacing-xl);
 
   color: var(--main-accent-color);
   background-color: var(--surface-highlight);
-
   border-radius: var(--border-radius-md);
-}
-
-.phone-box,
-.opening-time-box {
-  width: fit-content;
-  display: grid;
-  place-items: center;
-}
-.phone-number {
-  flex: 1;
-}
-.phone,
-.opening-time {
-  width: 220px;
-}
-
-.phone {
-  margin: var(--spacing-sm) 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-body);
-}
-.opening-time {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: var(--font-size-lg);
-  line-height: var(--line-height-body);
-}
-.phone-box > svg,
-.opening-time-box > svg {
-  width: 30px;
-  height: 40px;
-}
-
-.phone-box > svg > g {
-  fill: var(--accent-dark-color);
-}
-
-.opening-time-box > svg {
-  fill: var(--accent-dark-color);
-}
-
-.bottom-space {
-  margin-bottom: var(--spacing-sm);
 }

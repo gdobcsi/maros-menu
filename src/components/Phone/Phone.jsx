@@ -1,13 +1,17 @@
+import "./Phone.css";
+
 import PhoneIcon from "./PhoneIcon";
 
 const Phone = ({ phoneNumber }) => {
   return (
-    <div className="phone">
-      <div className="phone-box">
-        <PhoneIcon />
-      </div>
-      <div className="phone-number">{phoneNumber}</div>
-    </div>
+    <a
+      href={`tel:${phoneNumber.replace(/\s+/g, "")}`}
+      className="phone-button"
+      aria-label={`Telefonhívás: ${phoneNumber}`}
+    >
+      <PhoneIcon />
+      <span>{phoneNumber}</span>
+    </a>
   );
 };
 
