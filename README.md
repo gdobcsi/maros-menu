@@ -2,6 +2,8 @@
 
 **Élő oldal / Live website:** [marosétterem.hu](https://marosétterem.hu)
 
+**Developer:** [@gaborwebdev](https://github.com/gaborwebdev)
+
 ## Magyar dokumentáció
 
 ### Tartalomjegyzék
@@ -177,8 +179,6 @@ maros-menu/
 git clone https://github.com/gdobcsi/maros-menu.git
 cd maros-menu
 ```
-
-A `<repository-url>` helyére a GitHub repository tényleges klónozási URL-je kerül.
 
 #### Függőségek telepítése
 
@@ -414,8 +414,6 @@ maros-menu/
 git clone https://github.com/gdobcsi/maros-menu.git
 cd maros-menu
 ```
-
-Replace `<repository-url>` with the actual GitHub clone URL.
 
 #### Install dependencies
 
