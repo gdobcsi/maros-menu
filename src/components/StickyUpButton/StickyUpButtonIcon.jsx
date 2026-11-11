@@ -1,7 +1,7 @@
 const StickyUpButtonIcon = () => {
   return (
     <svg
-      // enable-background="new 0 0 32 32"
+      aria-hidden="true"
       height="32px"
       id="Layer_1"
       version="1.1"
