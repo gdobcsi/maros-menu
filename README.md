@@ -1,5 +1,12 @@
 # Maros Menu
 
+<p>
+  <strong>Author: </strong>
+  <a href="https://github.com/gaborwebdev">
+    @gaborwebdev
+  </a>
+</p>
+
 [🇬🇧 English](#project-overview) | [🇭🇺 Magyar](#projektbemutató)
 
 ## Contents
