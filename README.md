@@ -78,11 +78,11 @@ the application reflects my own journey as a developer.
 
 <table>
   <tr>
-    <td align="center"><img src="screenshots/mobile-1.jpg" width="230" alt="Maros Menu mobile Hungarian menu"></td>
+    <td align="center"><img src="screenshots/mobile-1.jpg" width="230" alt="Maros Menu initial mobile screen on page load"></td>
     <td align="center"><img src="screenshots/mobile-2.jpg" width="230" alt="Maros Menu mobile English menu"></td>
   </tr>
   <tr>
-    <td align="center">Hungarian menu</td>
+    <td align="center">Initial mobile screen on page load</td>
     <td align="center">English menu</td>
   </tr>
   <tr>
@@ -127,29 +127,17 @@ migration sources so that earlier approaches remain traceable.
 
 ### Technology stack
 
-  -----------------------------------------------------------------------
-  Technology                          Purpose
-  ----------------------------------- -----------------------------------
-  React 18.2                          Component-based user interface
-
-  JavaScript                          Application logic
-
-  Create React App (`react-scripts`   Development server, build, and test
-  5.0.1)                              commands
-
-  CSS                                 User interface styling
-
-  JSON                                Restaurant, language, and menu data
-
-  Jest                                Test runner
-
-  React Testing Library               React component testing
-
-  `@testing-library/user-event`       Simulating user interactions in
-                                      tests
-
-  `@testing-library/jest-dom`         Additional DOM assertions
-  -----------------------------------------------------------------------
+| Technology | Purpose |
+|---|---|
+| React 18.2 | Component-based user interface |
+| JavaScript | Application logic |
+| Create React App (`react-scripts` 5.0.1) | Development server, build, and test commands |
+| CSS | User interface styling |
+| JSON | Restaurant, language, and menu data |
+| Jest | Test runner |
+| React Testing Library | React component testing |
+| `@testing-library/user-event` | Simulating user interactions in tests |
+| `@testing-library/jest-dom` | Additional DOM assertions |
 
 React and React DOM are production dependencies. `react-scripts` and the
 testing packages are development dependencies (`devDependencies`).
@@ -158,11 +146,11 @@ testing packages are development dependencies (`devDependencies`).
 
 The application currently supports three languages:
 
-  Language code   Language    Selector label
-  --------------- ----------- ----------------
-  `hu`            Hungarian   Étlap
-  `en`            English     Menu
-  `de`            German      Menü
+| Language code | Language | Selector label |
+|---|---|---|
+| `hu` | Hungarian | Étlap |
+| `en` | English | Menu |
+| `de` | German | Menü |
 
 The language selector configuration is stored in
 `src/data/languages.json`. The selected language code is passed to the
@@ -240,34 +228,17 @@ made up of multiple components.
 
 #### Main components
 
-  -----------------------------------------------------------------------
-  Element                             Responsibility
-  ----------------------------------- -----------------------------------
-  `App`                               Main application component;
-                                      coordinates data, state, and
-                                      primary UI sections
-
-  `Header`                            Displays the restaurant logo
-
-  `LanguageSelector`                  Displays available languages and
-                                      handles language selection
-
-  `Menu`                              Displays categories and dishes in
-                                      the selected language
-
-  `Phone`                             Displays the restaurant phone
-                                      number
-
-  `OpeningTimes`                      Displays opening hours
-
-  `StickyUpButton`                    Scrolls back to the top of the page
-
-  `PhoneAndOpening`                   Combines the phone number and
-                                      opening hours into one UI section
-
-  `Footer`                            Displays contact information,
-                                      address, map, and social link
-  -----------------------------------------------------------------------
+| Element | Responsibility |
+|---|---|
+| `App` | Main application component; coordinates data, state, and primary UI sections |
+| `Header` | Displays the restaurant logo |
+| `LanguageSelector` | Displays available languages and handles language selection |
+| `Menu` | Displays categories and dishes in the selected language |
+| `Phone` | Displays the restaurant phone number |
+| `OpeningTimes` | Displays opening hours |
+| `StickyUpButton` | Scrolls back to the top of the page |
+| `PhoneAndOpening` | Combines the phone number and opening hours into one UI section |
+| `Footer` | Displays contact information, address, map, and social link |
 
 #### Language selection data flow
 
@@ -284,11 +255,12 @@ made up of multiple components.
 
 The main repository directories and files:
 
-``` text
+```text
 maros-menu/
 ├── public/                  # HTML template, manifest, and public icons
 ├── scripts/                 # Data preparation and migration scripts
 │   └── outputs/              # Migration outputs
+├── screenshots/              # Desktop and mobile project screenshots
 ├── src/
 │   ├── assets/               # Logo and other static assets
 │   ├── components/           # Individual React components
@@ -315,7 +287,7 @@ maros-menu/
 
 #### Clone the repository
 
-``` bash
+```bash
 git clone https://github.com/gdobcsi/maros-menu.git
 cd maros-menu
 ```
@@ -324,13 +296,13 @@ cd maros-menu
 
 For a reproducible installation based on `package-lock.json`:
 
-``` bash
+```bash
 npm ci
 ```
 
 #### Start the development server
 
-``` bash
+```bash
 npm start
 ```
 
@@ -339,7 +311,7 @@ default.
 
 #### Create a production build
 
-``` bash
+```bash
 npm run build
 ```
 
@@ -349,13 +321,13 @@ This creates an optimized production build in the `build/` directory.
 
 The project uses Jest and React Testing Library.
 
-``` bash
+```bash
 npm test
 ```
 
 To run the tests once without watch mode:
 
-``` bash
+```bash
 npm test -- --watchAll=false
 ```
 
@@ -382,7 +354,7 @@ The migration script reads
 output to the `scripts/outputs/` directory. Run it from the project
 root:
 
-``` bash
+```bash
 node scripts/migration.js
 ```
 
@@ -474,11 +446,11 @@ utamat is tükrözi.
 
 <table>
   <tr>
-    <td align="center"><img src="screenshots/mobile-1.jpg" width="230" alt="Maros Menu magyar mobilnézet"></td>
+    <td align="center"><img src="screenshots/mobile-1.jpg" width="230" alt="Maros Menu kezdő mobilképernyő betöltéskor"></td>
     <td align="center"><img src="screenshots/mobile-2.jpg" width="230" alt="Maros Menu angol mobilnézet"></td>
   </tr>
   <tr>
-    <td align="center">Magyar étlap</td>
+    <td align="center">Mobil kezdőképernyő betöltéskor</td>
     <td align="center">Angol étlap</td>
   </tr>
   <tr>
@@ -526,30 +498,17 @@ visszakövethetők maradtak.
 
 ### Technológiai háttér
 
-  -----------------------------------------------------------------------
-  Technológia                         Szerepe
-  ----------------------------------- -----------------------------------
-  React 18.2                          Komponensalapú felhasználói felület
-
-  JavaScript                          Alkalmazáslogika
-
-  Create React App (`react-scripts`   Fejlesztői szerver, build és
-  5.0.1)                              tesztparancsok
-
-  CSS                                 A felület megjelenítése
-
-  JSON                                Éttermi, nyelvi és étlapadatok
-                                      tárolása
-
-  Jest                                Tesztfuttató
-
-  React Testing Library               React-komponensek tesztelése
-
-  `@testing-library/user-event`       Felhasználói interakciók
-                                      szimulálása tesztekben
-
-  `@testing-library/jest-dom`         Kiegészítő DOM-ellenőrzések
-  -----------------------------------------------------------------------
+| Technológia | Szerepe |
+|---|---|
+| React 18.2 | Komponensalapú felhasználói felület |
+| JavaScript | Alkalmazáslogika |
+| Create React App (`react-scripts` 5.0.1) | Fejlesztői szerver, build és tesztparancsok |
+| CSS | A felület megjelenítése |
+| JSON | Éttermi, nyelvi és étlapadatok tárolása |
+| Jest | Tesztfuttató |
+| React Testing Library | React-komponensek tesztelése |
+| `@testing-library/user-event` | Felhasználói interakciók szimulálása tesztekben |
+| `@testing-library/jest-dom` | Kiegészítő DOM-ellenőrzések |
 
 A React és a React DOM production függőség. A `react-scripts` és a
 teszteléshez használt csomagok fejlesztői függőségek
@@ -559,11 +518,11 @@ teszteléshez használt csomagok fejlesztői függőségek
 
 Az alkalmazás jelenleg három nyelvet támogat:
 
-  Nyelvkód   Nyelv    Nyelvválasztó felirata
-  ---------- -------- ------------------------
-  `hu`       Magyar   Étlap
-  `en`       Angol    Menu
-  `de`       Német    Menü
+| Nyelvkód | Nyelv | Nyelvválasztó felirata |
+|---|---|---|
+| `hu` | Magyar | Étlap |
+| `en` | Angol | Menu |
+| `de` | Német | Menü |
 
 A nyelvválasztó konfigurációja a `src/data/languages.json` fájlban
 található. A kiválasztott nyelvkód alapján a `getLanguageMenu`
@@ -641,35 +600,17 @@ komponensből összeállított kompozíciókból épül fel.
 
 #### Főbb komponensek
 
-  -----------------------------------------------------------------------
-  Elem                                Felelősség
-  ----------------------------------- -----------------------------------
-  `App`                               Az alkalmazás fő komponense;
-                                      összefogja az adatokat, az
-                                      állapotot és a fő felületi
-                                      egységeket
-
-  `Header`                            Az étterem logójának megjelenítése
-
-  `LanguageSelector`                  A nyelvek megjelenítése és a
-                                      nyelvválasztás kezelése
-
-  `Menu`                              A kiválasztott nyelvű kategóriák és
-                                      ételek megjelenítése
-
-  `Phone`                             Az étterem telefonszámának
-                                      megjelenítése
-
-  `OpeningTimes`                      A nyitvatartás megjelenítése
-
-  `StickyUpButton`                    Visszagörgetés az oldal tetejére
-
-  `PhoneAndOpening`                   A telefonszám és a nyitvatartás
-                                      közös felületi egysége
-
-  `Footer`                            Kapcsolati adatok, cím, térkép és
-                                      közösségi hivatkozás megjelenítése
-  -----------------------------------------------------------------------
+| Elem | Felelősség |
+|---|---|
+| `App` | Az alkalmazás fő komponense; összefogja az adatokat, az állapotot és a fő felületi egységeket |
+| `Header` | Az étterem logójának megjelenítése |
+| `LanguageSelector` | A nyelvek megjelenítése és a nyelvválasztás kezelése |
+| `Menu` | A kiválasztott nyelvű kategóriák és ételek megjelenítése |
+| `Phone` | Az étterem telefonszámának megjelenítése |
+| `OpeningTimes` | A nyitvatartás megjelenítése |
+| `StickyUpButton` | Visszagörgetés az oldal tetejére |
+| `PhoneAndOpening` | A telefonszám és a nyitvatartás közös felületi egysége |
+| `Footer` | Kapcsolati adatok, cím, térkép és közösségi hivatkozás megjelenítése |
 
 #### A nyelvváltás adatfolyama
 
@@ -686,11 +627,12 @@ komponensből összeállított kompozíciókból épül fel.
 
 A repository főbb könyvtárai és fájljai:
 
-``` text
+```text
 maros-menu/
 ├── public/                  # HTML-sablon, manifest és publikus ikonok
 ├── scripts/                 # Adat-előkészítő és migrációs scriptek
 │   └── outputs/             # Migrációs kimenetek
+├── screenshots/              # Asztali és mobil képernyőképek
 ├── src/
 │   ├── assets/               # Logó és egyéb statikus erőforrások
 │   ├── components/           # Önálló React-komponensek
@@ -717,7 +659,7 @@ maros-menu/
 
 #### Repository klónozása
 
-``` bash
+```bash
 git clone https://github.com/gdobcsi/maros-menu.git
 cd maros-menu
 ```
@@ -726,13 +668,13 @@ cd maros-menu
 
 A `package-lock.json` alapján reprodukálható telepítéshez:
 
-``` bash
+```bash
 npm ci
 ```
 
 #### Fejlesztői szerver indítása
 
-``` bash
+```bash
 npm start
 ```
 
@@ -741,7 +683,7 @@ címen indítja el az alkalmazást.
 
 #### Production build készítése
 
-``` bash
+```bash
 npm run build
 ```
 
@@ -752,13 +694,13 @@ A parancs optimalizált, éles környezetben kiszolgálható buildet készít a
 
 A projekt tesztjeit a Jest és a React Testing Library futtatja.
 
-``` bash
+```bash
 npm test
 ```
 
 Egyszeri, nem interaktív futtatás:
 
-``` bash
+```bash
 npm test -- --watchAll=false
 ```
 
@@ -785,7 +727,7 @@ A migrációs script a
 be, és az eredményt a `scripts/outputs/` könyvtárba írja. A script a
 projekt gyökérkönyvtárából az alábbi paranccsal futtatható:
 
-``` bash
+```bash
 node scripts/migration.js
 ```
 
