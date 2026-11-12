@@ -42,7 +42,7 @@
       {
         "day": "Péntek",
         "from": "12:00",
-        "to": "21:00",
+        "to": "20:00",
         "isClosed": false
       },
       {
@@ -54,7 +54,7 @@
       {
         "day": "Vasárnap",
         "from": "12:00",
-        "to": "21:00",
+        "to": "19:00",
         "isClosed": false
       }
     ]
