@@ -6,7 +6,7 @@ const path = require("path");
 const rawdata = fs.readFileSync(
   path.resolve(
     __dirname,
-    "../src/data/menu/archive/migrated/2026_summer/source.json",
+    "../src/data/menu/archive/migrated/2026_summer/source-winter-2026.json",
   ),
 );
 const menu = JSON.parse(rawdata);
@@ -84,7 +84,7 @@ menu.forEach((category) => {
 fs.writeFileSync(
   path.resolve(
     __dirname,
-    "./outputs/new_datastructure_menu_with_UIDs_2026_summer.json",
+    "./outputs/new_datastructure_menu_with_UIDs_2026_winter.json",
   ),
   JSON.stringify(newMenu, null, 2),
 );
